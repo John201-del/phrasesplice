@@ -40,3 +40,9 @@ Weights are not included in Git or the application overlay. Download manifests i
 Codex authentication and usage belong to the user's own account. Public Hugging Face Spaces, video generation APIs and Wikimedia Commons have their own terms and availability. No account, API key, entitlement, paid material library or unlimited free cloud quota is included.
 
 Commons results can require attribution and share-alike notices. Preserve the author, original asset URL and license returned by the download tool. The templates shipped here are LocalCut's editing instructions, not copied paid template libraries.
+
+## Public demonstration footage
+
+`examples/localcut-nature.mp4` uses [Bigora waterfall](https://commons.wikimedia.org/wiki/File:Bigora_waterfall.webm), filmed by Termininja and published under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). The sample is a six-second H.264/AAC excerpt of that footage. No personal media or commercial stock library is included.
+
+The README animation (`docs/assets/localcut-demo.gif`) shows the same footage exported from LocalCut with a Chinese caption. The desktop image (`docs/assets/localcut-desktop.jpg`) is a real capture of that project in the public Windows preview. The GIF is silent; both the MP4 sample and the captioned export (`docs/assets/localcut-demo.mp4`) retain the original waterfall audio. The synthetic color-bar clip remains available solely as a reproducible codec/test fixture.

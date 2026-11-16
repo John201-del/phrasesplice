@@ -54,6 +54,12 @@ The published `v0.1.0-preview.1` source and package passed both remote checks on
 
 Both runs publish their evidence as workflow artifacts. These checks cover the basic Windows package and listed suites; they do not replace the optional-model and account-specific checks below.
 
+## Public scenic demonstration
+
+The README media was refreshed on 2026-11-16 using the public `v0.1.0-preview.1` Windows package installed into a separate directory. A prepared six-second project used CC0 waterfall footage, linked video/audio segments split at two seconds, and the caption “把日常，剪成故事。”. The actual GUI opened the project and the assistant panel's **导出** button produced the MP4 and reported successful media validation. The desktop image is an unmodified window capture, not a generated mockup. This demonstration was not claimed to be a new natural-language editing acceptance test.
+
+The exported MP4 has 150 H.264 frames at 640×360 and 25 fps, plus AAC audio; container duration is 6.016 seconds. Full decoding completed without errors, and audio measured −20.5 dB mean / −3.4 dB peak. Its SHA-256 is `25519e5449ca084cc40da156ca24b15ae8edc15b688927fd1838e07676d39efc`. The README GIF was made from this export; it is silent and reduced to 560 pixels wide at 8 fps to limit download size. The original synthetic sample remains a test fixture and is no longer the marketing preview.
+
 ## What these results do not cover
 
 - Every video container, GPU, display driver, Windows revision or hardware configuration.

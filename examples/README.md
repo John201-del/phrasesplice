@@ -1,4 +1,12 @@
-# Six-second demo
+# Example videos
+
+## Real footage: a waterfall
+
+`localcut-nature.mp4` is a six-second scenic clip with the original waterfall audio (H.264/AAC, 25 fps). It is an excerpt of [Bigora waterfall](https://commons.wikimedia.org/wiki/File:Bigora_waterfall.webm), by Termininja, published under CC0-1.0. See the adjacent `.license` file.
+
+Import it with **选择素材**, then try splitting it at two seconds, adding a caption and exporting MP4. It can be edited manually or through your configured AI assistant.
+
+## Synthetic codec test
 
 `localcut-demo.mp4` is a synthetic FFmpeg test pattern with a 440 Hz sine tone. It contains no personal footage, third-party music or voices.
 

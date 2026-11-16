@@ -1,8 +1,8 @@
 # LocalCut
 
-### 说出想法，留下能继续编辑的时间线。
+### 用中文，把素材剪成作品。
 
-**基于 Kdenlive 的中文 AI 剪辑工作台。** 用日常语言编排素材、剪口播、加字幕、套模板，再在多轨时间线上继续精修。
+**把想法说清楚，让 AI 帮你剪；时间线上的修改，能看、能改、能撤销。** LocalCut 是面向中文创作的 AI 剪辑工作台，用日常语言编排素材、剪口播、加字幕、套模板，得到可以继续编辑的多轨工程。
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](COPYING)
 [![Unit tests](https://github.com/John201-del/localcut/actions/workflows/ci.yml/badge.svg)](https://github.com/John201-del/localcut/actions/workflows/ci.yml)
@@ -12,9 +12,16 @@
 
 > **开发预览版，首先支持 Windows x64。** 手工剪辑不需要 AI 账号；语言助手可选择 Codex、兼容 API 或本地 Ollama，也能通过 MCP 让 WorkBuddy 控制剪辑。云端服务使用你自己的账号及额度，本地模型按需安装。
 
-![LocalCut 实际界面：中文指令完成切分、字幕与导出](docs/assets/localcut-desktop.png)
+![LocalCut 风景实拍样片动态预览](docs/assets/localcut-demo.gif)
 
-*实际桌面验收：一句中文要求完成 6 秒样片的音画切分、字幕、保存和导出。可用仓库示例视频复现。*
+*公开风景实拍素材的剪辑预览。[播放／下载有声 MP4 成片](docs/assets/localcut-demo.mp4) · [下载原始示例片段](examples/localcut-nature.mp4)，导入后即可体验。素材来源与许可见 [第三方说明](docs/THIRD_PARTY.md)。*
+
+<details>
+<summary>展开查看实际桌面界面</summary>
+
+![LocalCut 实际界面：风景视频、多轨时间线与 AI 助手](docs/assets/localcut-desktop.jpg)
+
+</details>
 
 ## 为什么做 LocalCut
 
@@ -26,7 +33,7 @@
 字幕用白字黑边，放在底部。最后导出 MP4。
 ```
 
-助手操作的是**可保存、可撤销、可继续编辑的原生工程**。你可以先描述想法，再调整细节。
+**导入素材 → 描述要求 → 检查时间线 → 导出作品。** 助手把修改落到可保存、可撤销、可继续编辑的原生工程里。先说出想法，再按预览调整，开始剪辑不必先记住一套按钮。
 
 | 亮点 | 对使用者有什么用 |
 | --- | --- |
@@ -36,7 +43,7 @@
 | **8 个内置剪辑模板** | 照片故事、产品展示、旅行章节、知识步骤、口播包装等，可套自己的素材 |
 | **本地图片与视频处理** | 磨皮、小瑕疵修复、抠图换背景、人声分离、卡通头像跟脸，生成新文件 |
 | **从照片开始创作** | 照片推拉运镜；可选照片＋语音口型视频；可选云端视频生成 |
-| **成熟编辑器底座** | 保留 Kdenlive 多轨时间线、关键帧、效果、工程文件和渲染能力 |
+| **从自动剪辑到手工精修** | 多轨时间线、关键帧、效果与渲染都保留，需要调整细节时可直接接手 |
 
 ## 快速开始
 
@@ -52,7 +59,7 @@ cd localcut
 
 首次启动会下载固定版本的应用组件和官方依赖，逐一验证 SHA-256。需要能连接 GitHub、KDE 下载站。安装不会修改系统 PATH，不捆绑账号、个人工程或模型。普通使用**不用编译 C++，也不用安装 Python**。
 
-1. 点击 **选择素材**，导入视频、音频或图片。第一次可以直接用仓库自带的 [6 秒示例视频](examples/localcut-demo.mp4)。
+1. 点击 **选择素材**，导入视频、音频或图片。第一次可以直接用仓库自带的 [风景实拍示例视频](examples/localcut-nature.mp4)。
 2. 手工编辑可直接开始。要用语言控制，点 **连接 AI**，选择已有 Codex 登录、云端 API 或本地 Ollama；WorkBuddy 选择 MCP 外部控制。
 3. 选择 Codex、兼容 API 或 Ollama 时，在助手输入框写要求；选择 WorkBuddy 时，在 WorkBuddy 中输入。先从“按顺序排列，保留原声”这样的小任务开始。
 4. 查看时间线和预览，满意后点 **导出**。助手默认把工程和成片保存在 `runtime/userdata/projects` 与 `runtime/userdata/exports`。
@@ -118,10 +125,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\check-runtime.ps1
 
 欢迎提交短小、可复现的剪辑需求、失败样例和 PR。优先方向是安装可靠性、更多自然语言编辑覆盖、任务进度与错误恢复，以及更多设备上的验收。见 [贡献指南](CONTRIBUTING.md)。
 
-如果它帮你少点了几个按钮，欢迎 **Star**；如果它没做到你说的效果，一份可复现的 Issue 对改进同样有用。
+如果你也想用一句话开始剪辑，欢迎 **Star**，关注后续版本。把你最想交给 AI 的剪辑任务写进 Issue，或带着可复现的样例一起改进它。
 
 ## 来源与许可证
 
-LocalCut 是 **Kdenlive 的独立衍生项目**，不是 KDE 官方发行版，也不代表 OpenAI。多轨编辑器与大量基础功能由 Kdenlive、MLT、Qt、KDE Frameworks 和 FFmpeg 提供。本项目主要增加语言助手、结构化编辑桥、模板及本地媒体处理适配。
+LocalCut 是 Kdenlive 的独立衍生项目，新增语言助手、结构化编辑桥、模板及本地媒体处理适配；基础编辑能力来自 Kdenlive、MLT、Qt、KDE Frameworks 和 FFmpeg。本项目不是 KDE 或 OpenAI 的官方产品。
 
 应用采用 [GPL v3](COPYING)，逐文件许可见 [LICENSES](LICENSES) 与 [REUSE.toml](REUSE.toml)。保留 [上游作者](AUTHORS) 署名。模型权重、字体、云素材和服务各有自己的条款，详见 [第三方说明](docs/THIRD_PARTY.md)。
