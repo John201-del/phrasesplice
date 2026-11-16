@@ -47,7 +47,12 @@ These checks establish the installed editor's native operations and MCP transpor
 
 The corrected source was rebuilt, packaged, installed into an empty runtime directory with Windows PowerShell 5.1, hash-checked and rendered through real MLT again. In a fresh data directory, the normal Codex connection completed one Chinese request to insert the demo, split linked video/audio at two seconds, add the two-second Chinese subtitle, save the project and export MP4. The model corrected an initially incomplete tool request within the same turn. The exported file was byte-identical to the independently exercised native result above (SHA-256 `34ed6379684281895686c9ae2304423286e9a430e4217642d0d057d2e8331c27`). This verifies this account, CLI version and example; it does not guarantee every model-generated edit.
 
-The first remote GitHub CI results will be linked after publication. Local acceptance does not substitute for those remote checks.
+The published `v0.1.0-preview.1` source and package passed both remote checks on 2026-11-16:
+
+- [Windows unit tests](https://github.com/John201-del/localcut/actions/runs/43806385228): all 195 actual Qt cases passed with zero failures or skips using official Qt 6.10.0 and MSVC 2022. Runtime-manifest rejection, Python syntax and transcript-word tests also passed.
+- [Clean Windows installation](https://github.com/John201-del/localcut/actions/runs/43806486279): downloaded the public release asset and official dependencies, verified hashes, loaded the editor, and rendered H.264/AAC media with real MLT. The output contained 50 frames at 25 fps, measured 2.005 seconds, and passed picture/audio signal checks.
+
+Both runs publish their evidence as workflow artifacts. These checks cover the basic Windows package and listed suites; they do not replace the optional-model and account-specific checks below.
 
 ## What these results do not cover
 
