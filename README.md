@@ -1,8 +1,8 @@
 # LocalCut
 
-### 用中文，把素材剪成作品。
+### 用语言，把素材剪成作品。
 
-**把想法说清楚，让 AI 帮你剪；时间线上的修改，能看、能改、能撤销。** LocalCut 是面向中文创作的 AI 剪辑工作台，用日常语言编排素材、剪口播、加字幕、套模板，得到可以继续编辑的多轨工程。
+**把想法说清楚，让 AI 帮你剪；时间线上的修改，能看、能改、能撤销。** LocalCut 是面向创作者的 AI 剪辑工作台，用日常语言编排素材、剪口播、加字幕、套模板，得到可以继续编辑的多轨工程。
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](COPYING)
 [![Unit tests](https://github.com/John201-del/localcut/actions/workflows/ci.yml/badge.svg)](https://github.com/John201-del/localcut/actions/workflows/ci.yml)
@@ -30,7 +30,7 @@
 
 | 亮点 | 对使用者有什么用 |
 | --- | --- |
-| **中文指令 → 原生时间线** | 插入、分割、修剪、移动、字幕和效果调整落到实际片段上 |
+| **自然语言指令 → 原生时间线** | 插入、分割、修剪、移动、字幕和效果调整落到实际片段上 |
 | **AI 由你选择** | Codex、DeepSeek、通义千问、豆包火山方舟、Ollama 或自定义兼容接口；WorkBuddy 通过 MCP 接入 |
 | **一批修改，一次撤销** | 编辑前核对工程状态；批量失败回滚，改错了可以退回 |
 | **8 个内置剪辑模板** | 照片故事、产品展示、旅行章节、知识步骤、口播包装等，可套自己的素材 |
@@ -93,7 +93,7 @@ cd localcut
 | 能力 | 在哪里处理 | 需要什么 |
 | --- | --- | --- |
 | 原生手工剪辑、预览、导出 | 本机 | 基础运行包 |
-| 中文助手、自动编排、模板套用 | 所选 AI 理解指令，本机执行编辑 | Codex、支持工具调用的兼容 API／Ollama，或 WorkBuddy MCP |
+| 语言助手、自动编排、模板套用 | 所选 AI 理解指令，本机执行编辑 | Codex、支持工具调用的兼容 API／Ollama，或 WorkBuddy MCP |
 | 修图、降噪、抠像、人声分离 | 本机 | 可选 local-ai 运行环境；自然语言入口需配置助手 |
 | 本地语音转字幕 | 本机 | 独立 Whisper 环境与模型；见使用指南 |
 | 照片说话、立体卡通跟脸 | 本机 | 可选 local-avatar 环境与模型；CPU 会较慢 |

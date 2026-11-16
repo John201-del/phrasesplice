@@ -2,7 +2,7 @@
 
 ### Describe your edit. Make it yours.
 
-**Tell the AI what you want. Review, refine, or undo its timeline edits.** LocalCut is an AI editing workspace focused on Chinese-language creation. Arrange clips, cut dialogue, add subtitles and apply templates through conversation, with an editable multitrack project you can keep working on.
+**Tell the AI what you want. Review, refine, or undo its timeline edits.** LocalCut is an AI editing workspace for creators. Arrange clips, cut dialogue, add subtitles and apply templates through conversation, with an editable multitrack project you can keep working on.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](COPYING)
 [![Unit tests](https://github.com/John201-del/localcut/actions/workflows/ci.yml/badge.svg)](https://github.com/John201-del/localcut/actions/workflows/ci.yml)
@@ -42,10 +42,10 @@ cd localcut
 
 The launcher downloads pinned application components and third-party runtimes with SHA-256 verification. You do not need a C++ compiler or Python for basic editing. Optional local models require separate installation and several GB of storage.
 
-Manual editing does not require an AI account. For language control, choose **连接 AI** and configure your own Codex login, compatible API endpoint, local Ollama model, or WorkBuddy MCP connection. The selected model must support tool calls; cloud usage belongs to your own account. API keys are kept in memory for the current session. See [AI setup](docs/AI_PROVIDERS.md). The current UI and assistant examples focus on Chinese.
+Manual editing does not require an AI account. For language control, choose **连接 AI** and configure your own Codex login, compatible API endpoint, local Ollama model, or WorkBuddy MCP connection. The selected model must support tool calls; cloud usage belongs to your own account. API keys are kept in memory for the current session. See [AI setup](docs/AI_PROVIDERS.md). The current assistant panel uses Chinese labels; instruction-language support depends on your chosen AI provider and model.
 
 1. Choose **选择素材** to import videos, audio or photos. Try the included [nature footage sample](examples/localcut-nature.mp4) first.
-2. Describe a small edit in the assistant, such as `把第一个视频在第 2 秒分成两段，保留原声。` (split the first video at two seconds and keep its audio). With WorkBuddy, enter the request in WorkBuddy instead.
+2. Describe a small edit in the assistant, such as `Split the first video at 2 seconds and keep its audio.` With WorkBuddy, enter the request in WorkBuddy instead.
 3. Review the timeline and preview, then choose **导出**. Assistant-created projects and exports default to `runtime/userdata/projects` and `runtime/userdata/exports`.
 
 ## Boundaries
