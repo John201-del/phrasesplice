@@ -5,8 +5,8 @@ body:
   - type: input
     id: version
     attributes:
-      label: LocalCut version / 版本
-      placeholder: 0.1.0-preview.1
+      label: PhraseSplice version / 版本
+      placeholder: 0.1.0-preview.2
     validations:
       required: true
   - type: input

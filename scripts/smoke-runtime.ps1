@@ -86,7 +86,7 @@ try {
     $rendered = Join-Path $OutputDirectory 'rendered.mp4'
     $profile = Join-Path $OutputDirectory 'smoke-profile'
     [IO.File]::WriteAllText($profile, @'
-description=LocalCut finite smoke profile
+description=PhraseSplice finite smoke profile
 frame_rate_num=25
 frame_rate_den=1
 width=320

@@ -49,5 +49,5 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'FFmpeg could not start. The runtime may be incomplete.' }
     $configuration = $version -join "`n"
     if ($configuration -match '--enable-nonfree' -or $configuration -notmatch '--enable-gpl') { throw 'Unexpected FFmpeg license configuration.' }
-    Write-Output ("LocalCut $($stamp.version): application hashes verified; GPL FFmpeg available.")
+    Write-Output ("PhraseSplice $($stamp.version): application hashes verified; GPL FFmpeg available.")
 } finally { $env:PATH = $previousPath }

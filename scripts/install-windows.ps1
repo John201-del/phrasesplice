@@ -3,7 +3,7 @@
 param([string]$OverlayArchive)
 $ErrorActionPreference = 'Stop'
 $repository = [IO.Path]::GetFullPath((Split-Path -Parent $PSScriptRoot))
-if (-not [Environment]::Is64BitOperatingSystem) { throw 'LocalCut requires 64-bit Windows.' }
+if (-not [Environment]::Is64BitOperatingSystem) { throw 'PhraseSplice requires 64-bit Windows.' }
 if ($repository -match '[^\x20-\x7e]') { throw 'Use an English/ASCII folder path for this preview (MLT runtime limitation).' }
 for ($ancestor = $repository; $ancestor; $ancestor = [IO.Path]::GetDirectoryName($ancestor)) {
     if ((Get-Item -LiteralPath $ancestor -Force).Attributes -band [IO.FileAttributes]::ReparsePoint) {
@@ -77,4 +77,4 @@ if (@($stagingItems | Where-Object { $_.Attributes -band [IO.FileAttributes]::Re
 }
 foreach ($item in @($stagingItems | Sort-Object { $_.FullName.Length } -Descending)) { Remove-Item -LiteralPath $item.FullName -Force }
 Remove-Item -LiteralPath $stage -Force
-Write-Output 'LocalCut is installed. Start-LocalCut.cmd opens the editor. No models or account credentials were installed.'
+Write-Output 'PhraseSplice is installed. Start-PhraseSplice.cmd opens the editor. No models or account credentials were installed.'

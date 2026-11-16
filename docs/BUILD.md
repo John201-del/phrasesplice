@@ -1,10 +1,10 @@
 # Building this fork
 
-For normal use, run `Start-LocalCut.cmd`. The source tree alone is not a self-contained C++ SDK.
+For normal use, run `Start-PhraseSplice.cmd`. The source tree alone is not a self-contained C++ SDK.
 
 ## Windows source build
 
-Use an official [KDE Craft](https://community.kde.org/Craft) Windows x64 environment with Kdenlive's dependencies installed. Install the dependencies with `craft --install-deps kdenlive`; build **this checkout** using the script below. Building Craft's upstream `kdenlive` target alone does not build LocalCut.
+Use an official [KDE Craft](https://community.kde.org/Craft) Windows x64 environment with Kdenlive's dependencies installed. Install the dependencies with `craft --install-deps kdenlive`; build **this checkout** using the script below. Building Craft's upstream `kdenlive` target alone does not build PhraseSplice.
 
 Requires PowerShell 7 for developer scripts, Git, CMake, Ninja, Qt, KDE Frameworks, MLT, KDDockWidgets, OpenTimelineIO and the other packages required by the root CMake file. Preparing a full SDK takes substantially more disk space than running the release.
 
@@ -26,14 +26,14 @@ The initial Windows application build uses this ABI family:
 
 The root CMake file declares minimum versions. A different valid SDK may compile, but it is not binary-compatible by assumption: never mix a newly compiled application with older Qt DLLs or arbitrary MLT/FFmpeg packages. Validate the resulting runtime.
 
-The Windows release installer uses the pinned artifacts in [windows.json](../distribution/windows.json). It downloads third-party runtimes from their publishers, excludes the upstream FFmpeg files, and uses the explicitly pinned GPL shared FFmpeg build. The LocalCut application overlay contains this fork's installed components and an application hash manifest. Every executable release must be paired with the exact source tag used to build it.
+The Windows release installer uses the pinned artifacts in [windows.json](../distribution/windows.json). It downloads third-party runtimes from their publishers, excludes the upstream FFmpeg files, and uses the explicitly pinned GPL shared FFmpeg build. The PhraseSplice application overlay contains this fork's installed components and an application hash manifest. Every executable release must be paired with the exact source tag used to build it.
 
 Package and test your own build:
 
 ```powershell
 pwsh -NoProfile -File .\scripts\package-overlay.ps1
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\install-windows.ps1 -OverlayArchive .\dist\localcut-windows-x64-0.1.0-preview.1.zip
-.\Start-LocalCut.cmd
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\install-windows.ps1 -OverlayArchive .\dist\phrasesplice-windows-x64-0.1.0-preview.2.zip
+.\Start-PhraseSplice.cmd
 ```
 
 Packaging writes a new application archive and updates the local `distribution/windows.json` hash. Do not commit that release metadata unless you intend to publish that exact build. The installer refuses to overwrite an existing runtime; use a fresh checkout or preserve and rename the old runtime before testing. Keep your user data.
@@ -78,4 +78,4 @@ When running these additional C++ suites directly, set `LOCALCUT_WORKSPACE_ROOT`
 
 ## Other platforms
 
-The upstream [build guide](../dev-docs/build.md) remains available. LocalCut's additional Windows install scripts and optional model environments have not been validated on Linux or macOS. Do not interpret the upstream platform list as a certification of this fork's additions.
+The upstream [build guide](../dev-docs/build.md) remains available. PhraseSplice's additional Windows install scripts and optional model environments have not been validated on Linux or macOS. Do not interpret the upstream platform list as a certification of this fork's additions.

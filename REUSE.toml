@@ -2,12 +2,12 @@
 # SPDX-FileCopyrightText: None
 
 version = 1
-SPDX-PackageName = "LocalCut"
+SPDX-PackageName = "PhraseSplice"
 SPDX-PackageSupplier = "LocalCut contributors"
-SPDX-PackageDownloadLocation = "https://github.com/John201-del/localcut"
+SPDX-PackageDownloadLocation = "https://github.com/John201-del/phrasesplice"
 
 [[annotations]]
-path = ["src/assistant/**", "data/assistant/**", "data/scripts/local_ai/**", "data/scripts/avatar/**", "scripts/**", "distribution/**", "Start-LocalCut.cmd", "tests/assistant/**", "tests/assistantpanel/**", "tests/assistantstorage/**", "tests/assistantundo/**", "tests/localai/**", "tests/avatar/**", "tests/videogeneration/**", "tests/chatcompletions/**", "tests/assistantsession/**", "tests/workbuddy/**", "tests/distribution/**", "tests/localcut_test_paths.hpp"]
+path = ["src/assistant/**", "data/assistant/**", "data/scripts/local_ai/**", "data/scripts/avatar/**", "scripts/**", "distribution/**", "Start-LocalCut.cmd", "Start-PhraseSplice.cmd", "tests/assistant/**", "tests/assistantpanel/**", "tests/assistantstorage/**", "tests/assistantundo/**", "tests/localai/**", "tests/avatar/**", "tests/videogeneration/**", "tests/chatcompletions/**", "tests/assistantsession/**", "tests/workbuddy/**", "tests/distribution/**", "tests/localcut_test_paths.hpp"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2026 LocalCut contributors"
 SPDX-License-Identifier = "GPL-3.0-only"

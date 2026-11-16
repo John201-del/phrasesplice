@@ -63,12 +63,12 @@ void WorkBuddyBridge::start(const QJsonArray &tools, const QString &instructions
     m_lock = std::make_unique<QLockFile>(lockDirectory + QStringLiteral("/localcut-mcp.lock"));
     m_lock->setStaleLockTime(0);
     if (!m_lock->tryLock()) {
-        Q_EMIT failed(QStringLiteral("此数据目录已由另一个 LocalCut WorkBuddy 桥接实例使用。"));
+        Q_EMIT failed(QStringLiteral("此数据目录已由另一个 PhraseSplice WorkBuddy 桥接实例使用。"));
         return;
     }
     if (!m_server.listen(m_socketName)) {
         m_lock.reset();
-        Q_EMIT failed(QStringLiteral("无法启动 WorkBuddy 本地管道；请确认此数据目录没有另一个 LocalCut 实例：") + m_server.errorString());
+        Q_EMIT failed(QStringLiteral("无法启动 WorkBuddy 本地管道；请确认此数据目录没有另一个 PhraseSplice 实例：") + m_server.errorString());
         return;
     }
     Q_EMIT statusChanged(QStringLiteral("本地 MCP 已就绪，等待 WorkBuddy 连接。"));

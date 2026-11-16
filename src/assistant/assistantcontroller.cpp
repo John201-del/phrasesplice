@@ -940,7 +940,7 @@ void AssistantController::beginConnection()
         QDialog dialog(d->panel);
         dialog.setWindowTitle(QStringLiteral("WorkBuddy MCP 配置"));
         auto *layout = new QVBoxLayout(&dialog);
-        auto *help = new QLabel(QStringLiteral("将以下配置添加到 WorkBuddy 的自定义 MCP。保持 LocalCut 打开并启用外部控制，再在 WorkBuddy 中描述剪辑要求。"), &dialog);
+        auto *help = new QLabel(QStringLiteral("将以下配置添加到 WorkBuddy 的自定义 MCP。保持 PhraseSplice 打开并启用外部控制，再在 WorkBuddy 中描述剪辑要求。"), &dialog);
         help->setWordWrap(true);
         layout->addWidget(help);
         auto *text = new QPlainTextEdit(QString::fromUtf8(configuration), &dialog);

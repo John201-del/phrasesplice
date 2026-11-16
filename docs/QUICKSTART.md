@@ -2,7 +2,7 @@
 
 ## 基础安装与第一次导出
 
-使用 Windows 11 x64，把仓库放在可写的英文目录。双击根目录的 `Start-LocalCut.cmd`。第一次需要联网下载；后续启动会校验应用文件并复用运行目录。
+使用 Windows 11 x64，把仓库放在可写的英文目录。双击根目录的 `Start-PhraseSplice.cmd`。第一次需要联网下载；后续启动会校验应用文件并复用运行目录。
 
 不要只复制 `kdenlive.exe`，它依赖同一运行包中的 Qt、KDE、MLT、解码库和资源文件。安装失败会显示具体错误，不会自动忽略校验或转用不明镜像。
 
@@ -16,7 +16,7 @@
 
 ```powershell
 $env:LOCALCUT_CODEX_EXECUTABLE = 'E:\Tools\Codex\codex.exe'
-.\Start-LocalCut.cmd
+.\Start-PhraseSplice.cmd
 ```
 
 这里的路径只是示例，必须改成你已安装、已登录的实际 `codex.exe`。无需把登录文件或 Key 复制进仓库。
@@ -49,9 +49,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\setup-local-avatar
 
 ### 原生在线资源的账号
 
-助手的 Wikimedia Commons 图片搜索不需要资源服务 Key。Kdenlive 原生在线资源面板中的 Freesound、Pexels 和 Pixabay 则使用你自己的服务凭据；LocalCut 不包含上游的共享 Key。
+助手的 Wikimedia Commons 图片搜索不需要资源服务 Key。Kdenlive 原生在线资源面板中的 Freesound、Pexels 和 Pixabay 则使用你自己的服务凭据；PhraseSplice 不包含上游的共享 Key。
 
-在启动 LocalCut 的同一个 PowerShell 窗口中，按需要设置 `LOCALCUT_FREESOUND_API_KEY`、`LOCALCUT_PEXELS_API_KEY` 或 `LOCALCUT_PIXABAY_API_KEY`，然后运行 `Start-LocalCut.cmd`。缺少对应 Key 时，该服务会提示所需变量并停止请求。环境变量从启动时继承，修改后需要重启程序；不要把实际 Key 保存到仓库脚本、Issue 或截图中。
+在启动 PhraseSplice 的同一个 PowerShell 窗口中，按需要设置 `LOCALCUT_FREESOUND_API_KEY`、`LOCALCUT_PEXELS_API_KEY` 或 `LOCALCUT_PIXABAY_API_KEY`，然后运行 `Start-PhraseSplice.cmd`。缺少对应 Key 时，该服务会提示所需变量并停止请求。环境变量从启动时继承，修改后需要重启程序；不要把实际 Key 保存到仓库脚本、Issue 或截图中。
 
 Freesound 的搜索 Key 与下载 OAuth 配置还需匹配。使用自己的 OAuth 应用下载时，在用户自己的 `resourceproviders` 配置中填写该应用对应的 `api.oauth2.clientId`；原生资源配置发现路径和已有自定义 `clientkey` 仍可用。不要修改或提交仓库内的配置来存储私人凭据。资源服务是否可用、账号额度和素材许可由各服务决定，尚未用接收方账号联网验收。
 
@@ -60,8 +60,8 @@ Freesound 的搜索 Key 与下载 OAuth 配置还需匹配。使用自己的 OAu
 通过启动器运行时，默认数据根是 `runtime/userdata`，包含工程、助手导出、本地模型和大部分助手缓存。可用 `LOCALCUT_WORKSPACE_ROOT` 指定其他可写英文绝对路径；启动器和模型安装器必须使用同一设置。
 
 ```powershell
-$env:LOCALCUT_WORKSPACE_ROOT = 'E:\LocalCutData'
-.\Start-LocalCut.cmd
+$env:LOCALCUT_WORKSPACE_ROOT = 'E:\PhraseSpliceData'
+.\Start-PhraseSplice.cmd
 ```
 
 不要使用目录联接、符号链接或网络共享。不要把数据根设成磁盘根。直接运行 exe 而未设置环境变量时，会使用系统用户数据目录下的 `LocalCut`。

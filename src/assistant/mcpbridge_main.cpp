@@ -22,7 +22,7 @@ int main(int argc, char **argv)
     QCoreApplication app(argc, argv);
     const auto arguments = app.arguments();
     if (arguments.size() != 3 || arguments[1] != QLatin1String("--socket") || arguments[2].isEmpty()) {
-        std::fputs("Usage: localcut-mcp --socket <LocalCut pipe name>\n", stderr);
+        std::fputs("Usage: localcut-mcp --socket <PhraseSplice pipe name>\n", stderr);
         return 2;
     }
 #ifdef Q_OS_WIN
@@ -45,9 +45,9 @@ int main(int argc, char **argv)
         app.exit(1);
     };
     QObject::connect(&socket, &QLocalSocket::errorOccurred, &app, [&](QLocalSocket::LocalSocketError) {
-        fail("LocalCut pipe is unavailable or disconnected. Start LocalCut and enable WorkBuddy first.");
+        fail("PhraseSplice pipe is unavailable or disconnected. Start PhraseSplice and enable WorkBuddy first.");
     });
-    QObject::connect(&socket, &QLocalSocket::disconnected, &app, [&]() { fail("LocalCut pipe disconnected."); });
+    QObject::connect(&socket, &QLocalSocket::disconnected, &app, [&]() { fail("PhraseSplice pipe disconnected."); });
     // stdout is another potentially blocked pipe. Never write it on the socket
     // event thread: editor shutdown must still terminate an unresponsive client.
     std::thread([&]() {
@@ -85,14 +85,14 @@ int main(int argc, char **argv)
                 outputReady.notify_one();
             }
             if (output.size() > maximumMessage) {
-                fail("LocalCut response exceeds 8 MiB.");
+                fail("PhraseSplice response exceeds 8 MiB.");
                 return;
             }
         }
     });
     QTimer connectionTimeout;
     connectionTimeout.setSingleShot(true);
-    QObject::connect(&connectionTimeout, &QTimer::timeout, &app, [&]() { fail("Timed out connecting to LocalCut."); });
+    QObject::connect(&connectionTimeout, &QTimer::timeout, &app, [&]() { fail("Timed out connecting to PhraseSplice."); });
     QObject::connect(&socket, &QLocalSocket::connected, &app, [&]() {
         connectionTimeout.stop();
         // Only one input line can be queued: BlockingQueuedConnection provides
@@ -121,7 +121,7 @@ int main(int argc, char **argv)
                     if (socket.state() == QLocalSocket::ConnectedState && socket.bytesToWrite() + message.size() <= 2 * maximumMessage) {
                         accepted = socket.write(message) == message.size();
                     }
-                    if (!accepted) fail("LocalCut pipe cannot accept more MCP input.");
+                    if (!accepted) fail("PhraseSplice pipe cannot accept more MCP input.");
                 }, Qt::BlockingQueuedConnection);
                 if (!accepted) return;
                 line.clear();

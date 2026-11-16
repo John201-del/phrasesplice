@@ -7,7 +7,7 @@ $manifestPath = Join-Path $repository 'distribution/windows.json'
 $manifest = Get-Content -LiteralPath $manifestPath -Raw -Encoding UTF8 | ConvertFrom-Json
 $version = $manifest.version
 $destination = Join-Path $repository ('dist/overlay-' + [Guid]::NewGuid().ToString('N'))
-$archive = Join-Path $repository "dist/localcut-windows-x64-$version.zip"
+$archive = Join-Path $repository "dist/phrasesplice-windows-x64-$version.zip"
 if (Test-Path -LiteralPath $archive) { throw 'An overlay archive already exists. Preserve or remove that exact previous artifact before repackaging.' }
 foreach ($required in @('bin/kdenlive.exe','bin/kdenlive_render.exe','bin/localcut-mcp.exe','bin/data/kdenlive/assistant/edit_templates.json')) {
     if (-not (Test-Path -LiteralPath (Join-Path $installed $required))) { throw "Build/install this checkout first. Missing $required" }
@@ -26,11 +26,11 @@ foreach ($item in $items) {
 }
 Copy-Item -LiteralPath "$repository/COPYING" -Destination "$destination/LOCALCUT-COPYING"
 Copy-Item -LiteralPath "$repository/AUTHORS" -Destination "$destination/KDENLIVE-AUTHORS"
-$stamp = @{ version = $version; source = "https://github.com/John201-del/localcut/tree/v$version"; files = $files }
+$stamp = @{ version = $version; source = "https://github.com/John201-del/phrasesplice/tree/v$version"; files = $files }
 $stamp | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath "$destination/localcut-release.json" -Encoding utf8
 Compress-Archive -Path "$destination/*" -DestinationPath $archive -CompressionLevel Optimal
 $overlay = @{ file = [IO.Path]::GetFileName($archive); sha256 = (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant();
-    url = "https://github.com/John201-del/localcut/releases/download/v$version/$([IO.Path]::GetFileName($archive))" }
+    url = "https://github.com/John201-del/phrasesplice/releases/download/v$version/$([IO.Path]::GetFileName($archive))" }
 $manifest | Add-Member -MemberType NoteProperty -Name overlay -Value $overlay -Force
 $manifest | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $manifestPath -Encoding utf8
 Write-Output "Application overlay: $archive"

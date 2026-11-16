@@ -54,6 +54,10 @@ The published `v0.1.0-preview.1` source and package passed both remote checks on
 
 Both runs publish their evidence as workflow artifacts. These checks cover the basic Windows package and listed suites; they do not replace the optional-model and account-specific checks below.
 
+## PhraseSplice Windows preview 2
+
+On 2026-11-16 the renamed `v0.1.0-preview.2` candidate was built with Craft and installed into a new directory with the pinned official dependencies. `Start-PhraseSplice.cmd` launched the editor with the PhraseSplice window title. The actual GUI opened a pre-rename `.kdenlive` project with two linked A/V segments, Chinese subtitles, and a source media filename containing Chinese characters and spaces. The assistant's Export button produced a 1920×1080 H.264/AAC MP4 with 100 frames at 25 fps and a 4.01-second container duration. Full decoding passed and the original project hash stayed unchanged. The local D-drive configuration produced the same export SHA-256. No live AI or optional model requests were made during this rename check.
+
 ## Public scenic demonstration
 
 The README media was refreshed on 2026-11-16 using the public `v0.1.0-preview.1` Windows package installed into a separate directory. A prepared six-second project used CC0 waterfall footage, linked video/audio segments split at two seconds, and the caption “把日常，剪成故事。”. The actual GUI opened the project and the assistant panel's **导出** button produced the MP4 and reported successful media validation. The desktop image is an unmodified window capture, not a generated mockup. This demonstration was not claimed to be a new natural-language editing acceptance test.

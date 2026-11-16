@@ -16,7 +16,7 @@
 
 *PhraseSplice in use: waterfall footage in the player, alongside the timeline and AI assistant. [Watch or download the MP4 export with audio](docs/assets/localcut-demo.mp4), or [try the source sample](examples/localcut-nature.mp4). See [third-party notices](docs/THIRD_PARTY.md) for footage sources and licenses.*
 
-PhraseSplice was previously named LocalCut. The current Windows preview still shows the old name in the window title and launcher filename.
+PhraseSplice was previously named LocalCut. Existing `.kdenlive` projects can be opened in the renamed Windows preview. When upgrading, install the preview in a new directory and reopen your existing projects.
 
 ## Highlights
 
@@ -39,7 +39,7 @@ This is a **Windows x64 development preview**. Use a writable ASCII path; the bu
 ```powershell
 git clone https://github.com/John201-del/phrasesplice.git
 cd phrasesplice
-.\Start-LocalCut.cmd
+.\Start-PhraseSplice.cmd
 ```
 
 The launcher downloads pinned application components and third-party runtimes with SHA-256 verification. You do not need a C++ compiler or Python for basic editing. Optional local models require separate installation and several GB of storage.

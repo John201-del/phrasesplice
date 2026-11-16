@@ -67,7 +67,7 @@ ProviderModel::ProviderModel(const QString &path)
             const QString value = qEnvironmentVariable(key.second).trimmed();
             m_clientkey.replace(QLatin1String(key.first), value);
             if (value.isEmpty()) {
-                m_keyError = i18n("Set %1 to your own %2 API key and restart LocalCut.", QString::fromLatin1(key.second), m_name);
+                m_keyError = i18n("Set %1 to your own %2 API key and restart PhraseSplice.", QString::fromLatin1(key.second), m_name);
             }
         }
 

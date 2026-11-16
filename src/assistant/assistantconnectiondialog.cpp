@@ -116,7 +116,7 @@ void AssistantConnectionDialog::updateProvider()
     if (provider == QStringLiteral("codex")) {
         m_help->setText(tr("使用本机已安装并登录的 Codex CLI。"));
     } else if (provider == QStringLiteral("workbuddy")) {
-        m_help->setText(tr("通过 MCP 由 WorkBuddy 外部控制。使用时请让 LocalCut 保持打开，并在 WorkBuddy 中发送要求。"));
+        m_help->setText(tr("通过 MCP 由 WorkBuddy 外部控制。使用时请让 PhraseSplice 保持打开，并在 WorkBuddy 中发送要求。"));
     } else {
         m_help->setText(tr("填写完整请求地址（含 /chat/completions），软件不会自动补路径。云端使用 HTTPS，本机回环地址可用 HTTP；地址不能含账号密码或 ?、# 参数。模型名或接入点 ID 请以所选服务中实际可用的值为准。"));
     }
