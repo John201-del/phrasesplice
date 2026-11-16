@@ -12,16 +12,9 @@
 
 > **开发预览版，首先支持 Windows x64。** 手工剪辑不需要 AI 账号；语言助手可选择 Codex、兼容 API 或本地 Ollama，也能通过 MCP 让 WorkBuddy 控制剪辑。云端服务使用你自己的账号及额度，本地模型按需安装。
 
-![LocalCut 风景实拍样片动态预览](docs/assets/localcut-demo.gif)
-
-*公开风景实拍素材的剪辑预览。[播放／下载有声 MP4 成片](docs/assets/localcut-demo.mp4) · [下载原始示例片段](examples/localcut-nature.mp4)，导入后即可体验。素材来源与许可见 [第三方说明](docs/THIRD_PARTY.md)。*
-
-<details>
-<summary>展开查看实际桌面界面</summary>
-
 ![LocalCut 实际界面：风景视频、多轨时间线与 AI 助手](docs/assets/localcut-desktop.jpg)
 
-</details>
+*LocalCut 实际工作界面：播放器显示瀑布素材，时间线与 AI 助手同时可见。[播放／下载有声 MP4 成片](docs/assets/localcut-demo.mp4) · [下载原始示例片段](examples/localcut-nature.mp4)，导入后即可体验。素材来源与许可见 [第三方说明](docs/THIRD_PARTY.md)。*
 
 ## 为什么做 LocalCut
 

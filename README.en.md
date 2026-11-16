@@ -12,16 +12,9 @@
 
 > **Windows x64 development preview.** Manual editing needs no AI account. Language control uses your own AI provider or local model; optional media models are installed separately.
 
-![LocalCut nature footage preview](docs/assets/localcut-demo.gif)
-
-*A preview edited from publicly available nature footage. [Watch or download the MP4 export with audio](docs/assets/localcut-demo.mp4), or [try the source sample](examples/localcut-nature.mp4). See [third-party notices](docs/THIRD_PARTY.md) for footage sources and licenses.*
-
-<details>
-<summary>See the actual desktop workspace</summary>
-
 ![Actual LocalCut desktop: nature footage, multitrack timeline and AI assistant](docs/assets/localcut-desktop.jpg)
 
-</details>
+*LocalCut in use: waterfall footage in the player, alongside the timeline and AI assistant. [Watch or download the MP4 export with audio](docs/assets/localcut-demo.mp4), or [try the source sample](examples/localcut-nature.mp4). See [third-party notices](docs/THIRD_PARTY.md) for footage sources and licenses.*
 
 ## Highlights
 
