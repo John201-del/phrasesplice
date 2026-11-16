@@ -1,0 +1,77 @@
+name: Published Windows installation
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  clean-install:
+    runs-on: windows-2022
+    timeout-minutes: 45
+    defaults:
+      run:
+        shell: powershell
+        working-directory: D:\workspace\localcut
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.release.tag_name }}
+          path: tagged-source
+          persist-credentials: false
+      - name: Prepare a clean ASCII installation directory
+        working-directory: ${{ github.workspace }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $target = 'D:\workspace\localcut'
+          if (Test-Path -LiteralPath $target) { throw 'The installation directory must start empty.' }
+          New-Item -ItemType Directory -Path $target -Force | Out-Null
+          Copy-Item -Path "$env:GITHUB_WORKSPACE/tagged-source/*" -Destination $target -Recurse -Force
+          if (Test-Path -LiteralPath "$target/runtime") { throw 'The tag must not contain a preinstalled runtime.' }
+          New-Item -ItemType Directory -Path "$target/build/install-tmp" -Force | Out-Null
+          "TEMP=$target/build/install-tmp" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          "TMP=$target/build/install-tmp" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+      - name: Require an application overlay from this published release
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $event = Get-Content -LiteralPath $env:GITHUB_EVENT_PATH -Raw -Encoding UTF8 | ConvertFrom-Json
+          $manifest = Get-Content -LiteralPath distribution/windows.json -Raw -Encoding UTF8 | ConvertFrom-Json
+          if ($event.release.draft -or -not $manifest.overlay -or $manifest.overlay.sha256 -notmatch '^[0-9a-fA-F]{64}$') {
+            throw 'This tag has no published, checksummed application overlay.'
+          }
+          $assets = @($event.release.assets | Where-Object {
+            $_.browser_download_url -eq $manifest.overlay.url -and $_.name -eq $manifest.overlay.file
+          })
+          if ($assets.Count -ne 1) { throw 'The application overlay must be an asset of the triggering published release.' }
+      - name: Install the published package with official dependencies
+        run: ./scripts/install-windows.ps1
+      - name: Verify application hashes and runtime layout
+        run: ./scripts/check-runtime.ps1 -Runtime 'D:\workspace\localcut\runtime'
+      - name: Load the built editor with the published Qt runtime
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $runtime = 'D:\workspace\localcut\runtime'
+          $env:PATH = "$runtime/bin;$env:SystemRoot/System32;$env:SystemRoot"
+          $env:QT_PLUGIN_PATH = "$runtime/bin"
+          $env:QT_QPA_PLATFORM = 'offscreen'
+          $env:LOCALCUT_WORKSPACE_ROOT = 'D:\workspace\localcut\build\version-userdata'
+          $process = Start-Process "$runtime/bin/kdenlive.exe" -ArgumentList '--version' -WindowStyle Hidden -PassThru `
+            -RedirectStandardOutput 'build/editor-version.txt' -RedirectStandardError 'build/editor-version-errors.txt'
+          $process.Handle | Out-Null
+          if (-not $process.WaitForExit(60000)) { $process.Kill(); throw 'Editor startup timed out.' }
+          $process.WaitForExit()
+          if ($process.ExitCode -ne 0) { throw "Editor failed to load: $($process.ExitCode)" }
+          if (-not (Get-Content 'build/editor-version.txt' -Raw)) { throw 'Editor produced no version output.' }
+      - name: Render a finite video through the installed MLT runtime
+        run: ./scripts/smoke-runtime.ps1 -Runtime 'D:\workspace\localcut\runtime' -OutputDirectory 'D:\workspace\localcut\build\smoke'
+      - name: Upload smoke report and native logs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: windows-install-smoke-${{ github.event.release.tag_name }}
+          path: |
+            D:\workspace\localcut\build\smoke
+            D:\workspace\localcut\build\editor-version*.txt
+          if-no-files-found: warn

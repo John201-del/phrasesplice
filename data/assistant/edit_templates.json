@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "templates": [
+    {
+      "id": "photo_story_v1",
+      "version": 1,
+      "name": "照片故事",
+      "description": "照片顺序成片，交替推拉",
+      "minInputs": 3,
+      "maxInputs": 12
+    },
+    {
+      "id": "knowledge_steps_v1",
+      "version": 1,
+      "name": "知识步骤",
+      "description": "按步骤讲解，结尾加长阅读",
+      "minInputs": 3,
+      "maxInputs": 8
+    },
+    {
+      "id": "product_three_shot_v1",
+      "version": 1,
+      "name": "产品三镜头",
+      "description": "全景、细节、使用场景按1:1:2编排",
+      "minInputs": 3,
+      "maxInputs": 3
+    },
+    {
+      "id": "travel_chapters_v1",
+      "version": 1,
+      "name": "旅行章节",
+      "description": "保持旅行素材顺序与章节短句",
+      "minInputs": 4,
+      "maxInputs": 10
+    },
+    {
+      "id": "event_recap_v1",
+      "version": 1,
+      "name": "活动回顾",
+      "description": "开场与结尾各20%，主体60%",
+      "minInputs": 3,
+      "maxInputs": 10
+    },
+    {
+      "id": "before_after_v1",
+      "version": 1,
+      "name": "顺序前后对比",
+      "description": "两个等长来源顺序对照",
+      "minInputs": 2,
+      "maxInputs": 2
+    },
+    {
+      "id": "vertical_teaser_v1",
+      "version": 1,
+      "name": "竖屏预告",
+      "description": "仅竖屏工程，首段钩子加长",
+      "minInputs": 3,
+      "maxInputs": 6
+    },
+    {
+      "id": "talking_clean_v1",
+      "version": 1,
+      "name": "口播包装",
+      "description": "显式片段与确认保留区间，用户提供字幕",
+      "minInputs": 0,
+      "maxInputs": 0
+    }
+  ]
+}

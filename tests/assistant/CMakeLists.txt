@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.20)
+project(CodexClientTests LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_AUTOMOC ON)
+enable_testing()
+find_package(Qt6 REQUIRED COMPONENTS Core Test)
+find_package(Python3 REQUIRED COMPONENTS Interpreter)
+file(TO_CMAKE_PATH "${Python3_EXECUTABLE}" PYTHON_TEST_PATH)
+add_executable(codexclienttest codexclienttest.cpp ../../src/assistant/codexclient.cpp ../../src/assistant/workspacepaths.cpp)
+target_link_libraries(codexclienttest PRIVATE Qt6::Core Qt6::Test)
+target_compile_definitions(codexclienttest PRIVATE
+    FAKE_CODEX_PATH="${CMAKE_CURRENT_SOURCE_DIR}/fake_codex.py"
+    PYTHON_PATH="${PYTHON_TEST_PATH}")
+if(MSVC)
+    target_compile_options(codexclienttest PRIVATE /utf-8)
+endif()
+add_test(NAME codexclienttest COMMAND codexclienttest)

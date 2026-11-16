@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.20)
+project(AssistantSmoke LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_AUTOMOC ON)
+find_package(Qt6 REQUIRED COMPONENTS Core)
+add_executable(assistant-smoke smoke.cpp ../../src/assistant/codexclient.cpp ../../src/assistant/workspacepaths.cpp)
+target_link_libraries(assistant-smoke PRIVATE Qt6::Core)

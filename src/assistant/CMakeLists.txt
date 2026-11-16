@@ -1,0 +1,22 @@
+# SPDX-License-Identifier: BSD-2-Clause
+set(kdenlive_SRCS
+  ${kdenlive_SRCS}
+  assistant/editbridge.cpp
+  assistant/edittemplates.cpp
+  assistant/codexclient.cpp
+  assistant/chatcompletionsclient.cpp
+  assistant/workbuddybridge.cpp
+  assistant/assistantsession.cpp
+  assistant/assistantconnectiondialog.cpp
+  assistant/videogenerationclient.cpp
+  assistant/ltxspacevideoprovider.cpp
+  assistant/videogenerationprovider.h
+  assistant/assistantpanel.cpp
+  assistant/workspacepaths.cpp
+  assistant/mediatasks.cpp
+  assistant/localmediaprocessor.cpp
+  assistant/avatargenerator.cpp
+  assistant/freespeechclient.cpp
+  assistant/commonsclient.cpp
+  assistant/assistantcontroller.cpp
+  PARENT_SCOPE)

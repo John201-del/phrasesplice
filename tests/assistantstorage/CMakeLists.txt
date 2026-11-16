@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.20)
+project(AssistantStorageTests LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_AUTOMOC ON)
+find_package(Qt6 REQUIRED COMPONENTS Core Test)
+
+enable_testing()
+add_executable(assistantstoragetest assistantstoragetest.cpp ../../src/assistant/workspacepaths.cpp)
+target_include_directories(assistantstoragetest PRIVATE ../../src)
+target_link_libraries(assistantstoragetest PRIVATE Qt6::Core Qt6::Test)
+add_test(NAME assistantstoragetest COMMAND assistantstoragetest)

@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: GPL-3.0-only
+cmake_minimum_required(VERSION 3.20)
+project(ChatCompletionsClientTests LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_AUTOMOC ON)
+find_package(Qt6 REQUIRED COMPONENTS Core Network Test)
+enable_testing()
+add_executable(chatcompletionsclienttest test.cpp ../../src/assistant/chatcompletionsclient.cpp)
+target_link_libraries(chatcompletionsclienttest PRIVATE Qt6::Core Qt6::Network Qt6::Test)
+target_compile_definitions(chatcompletionsclienttest PRIVATE QT_USE_QSTRINGBUILDER)
+add_test(NAME chatcompletionsclienttest COMMAND chatcompletionsclienttest)
