@@ -1,24 +1,26 @@
-# LocalCut
+# PhraseSplice
 
 ### 用语言，把素材剪成作品。
 
-**把想法说清楚，让 AI 帮你剪；时间线上的修改，能看、能改、能撤销。** LocalCut 是面向创作者的 AI 剪辑工作台，用日常语言编排素材、剪口播、加字幕、套模板，得到可以继续编辑的多轨工程。
+**把想法说清楚，让 AI 帮你剪；时间线上的修改，能看、能改、能撤销。** PhraseSplice 是面向创作者的 AI 剪辑工作台，用日常语言编排素材、剪口播、加字幕、套模板，得到可以继续编辑的多轨工程。
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](COPYING)
-[![Unit tests](https://github.com/John201-del/localcut/actions/workflows/ci.yml/badge.svg)](https://github.com/John201-del/localcut/actions/workflows/ci.yml)
+[![Unit tests](https://github.com/John201-del/phrasesplice/actions/workflows/ci.yml/badge.svg)](https://github.com/John201-del/phrasesplice/actions/workflows/ci.yml)
 ![Windows preview](https://img.shields.io/badge/Windows-x64%20preview-2563eb)
 
-[快速开始](#快速开始) · [可以这样说](#可以这样说) · [功能与依赖](#功能与依赖) · [验证记录](docs/VALIDATION.md) · [English](README.en.md)
+[快速开始](#快速开始) · [可以这样说](#可以这样说) · [云端功能](#云端功能) · [功能与依赖](#功能与依赖) · [验证记录](docs/VALIDATION.md) · [English](README.en.md)
 
 > **开发预览版，首先支持 Windows x64。** 手工剪辑不需要 AI 账号；语言助手可选择 Codex、兼容 API 或本地 Ollama，也能通过 MCP 让 WorkBuddy 控制剪辑。云端服务使用你自己的账号及额度，本地模型按需安装。
 
-![LocalCut 实际界面：风景视频、多轨时间线与 AI 助手](docs/assets/localcut-desktop.jpg)
+![PhraseSplice 实际界面：风景视频、多轨时间线与 AI 助手](docs/assets/localcut-desktop.jpg)
 
-*LocalCut 实际工作界面：播放器显示瀑布素材，时间线与 AI 助手同时可见。[播放／下载有声 MP4 成片](docs/assets/localcut-demo.mp4) · [下载原始示例片段](examples/localcut-nature.mp4)，导入后即可体验。素材来源与许可见 [第三方说明](docs/THIRD_PARTY.md)。*
+*PhraseSplice 实际工作界面：播放器显示瀑布素材，时间线与 AI 助手同时可见。[播放／下载有声 MP4 成片](docs/assets/localcut-demo.mp4) · [下载原始示例片段](examples/localcut-nature.mp4)，导入后即可体验。素材来源与许可见 [第三方说明](docs/THIRD_PARTY.md)。*
 
-## 为什么做 LocalCut
+PhraseSplice 原名 LocalCut。现有 Windows 预览包的窗口标题和启动脚本仍显示旧名。
 
-想剪一段视频，却不知道该点哪个按钮。LocalCut 把这个起点变成一句话：
+## 为什么做 PhraseSplice
+
+想剪一段视频，却不知道该点哪个按钮。PhraseSplice 把这个起点变成一句话：
 
 ```text
 把这些视频按顺序接起来，保留原声。
@@ -43,8 +45,8 @@
 先使用 **Windows 11 x64、可写的英文目录**。本预览版的 MLT 运行路径暂不支持中文；不要求 D 盘。建议预留至少 3 GB 用于基础安装及下载缓存，可选模型另需数 GB。
 
 ```powershell
-git clone https://github.com/John201-del/localcut.git
-cd localcut
+git clone https://github.com/John201-del/phrasesplice.git
+cd phrasesplice
 .\Start-LocalCut.cmd
 ```
 
@@ -88,6 +90,18 @@ cd localcut
 
 立体卡通是**立体风格的二维绘制与人脸跟踪**。照片推拉是运镜动画。照片说话另用本地数字人模型。三者的效果、耗时和输入要求不同，见 [功能边界](docs/QUICKSTART.md#功能边界)。
 
+## 云端功能
+
+| 功能 | 入口与服务 | 使用条件 |
+| --- | --- | --- |
+| **用语言剪辑** | **连接 AI** → Codex、DeepSeek、通义千问、豆包火山方舟或自定义兼容 API。也可以在 WorkBuddy 中通过 MCP 控制时间线 | Codex 使用自己的登录与额度。兼容 API 需要自己的 Key 和支持工具调用的模型。WorkBuddy 的账号与额度由其服务决定 |
+| **文生视频** | **生成视频 → LTX**，输入提示词，生成约 4–8 秒的片段 | 使用 [Lightricks 公共 Space](https://huggingface.co/spaces/Lightricks/ltx-video-distilled) 的共享额度，无需 Key，可能排队或限流 |
+| **文生视频、首帧图生视频** | **生成视频 → Seedance**，根据文字生成，也可添加一张首帧图 | 需要开通火山方舟相应模型并填写自己的 API Key，按服务计费 |
+| **普通话配音** | 在助手中说“把这段文字生成普通话配音并导入”。每次最多 200 字 | 使用 [k2-fsa 公共 Space](https://huggingface.co/spaces/k2-fsa/text-to-speech)。共享服务的可用性与额度可能变化 |
+| **在线素材** | 助手可在 Wikimedia Commons 搜索、下载并导入图片。原生在线资源面板可接入 Freesound、Pexels 和 Pixabay | Commons 搜索无需 Key。其他素材服务使用自己的凭据，下载后按素材许可保留署名 |
+
+剪辑指令由选定的 AI 理解，时间线修改和导出在本机执行。免费公共视频通道失败后不会自动切换到付费接口。模板套用和照片口型同步分别使用内置模板和可选本地模型。详见 [AI 接入指南](docs/AI_PROVIDERS.md) 与 [验证范围](docs/VALIDATION.md)。
+
 ## 功能与依赖
 
 | 能力 | 在哪里处理 | 需要什么 |
@@ -97,8 +111,6 @@ cd localcut
 | 修图、降噪、抠像、人声分离 | 本机 | 可选 local-ai 运行环境；自然语言入口需配置助手 |
 | 本地语音转字幕 | 本机 | 独立 Whisper 环境与模型；见使用指南 |
 | 照片说话、立体卡通跟脸 | 本机 | 可选 local-avatar 环境与模型；CPU 会较慢 |
-| 免费图片搜索 | Wikimedia Commons | 网络；按素材要求保留署名与许可 |
-| 云配音、云视频 | 所选外部服务 | 网络及其当前可用性；付费接口需要自己的 Key |
 
 **隐私说明：** 指令、工程信息、转写文字和请求查看的缩略图可能发送给你选择的 AI。WorkBuddy 决定其所选模型的处理方式；Ollama 只有使用本地模型时才是本机推理。使用云配音/生成时，相关文字或图片会发送给所选服务。API Key 仅保留在本次程序会话内，不写入工程或仓库。
 
@@ -112,7 +124,7 @@ cd localcut
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\check-runtime.ps1
 ```
 
-然后提交 [Bug 报告](https://github.com/John201-del/localcut/issues/new?template=bug_report.yml)，附系统版本、操作步骤和经过脱敏的错误文字。源码可编译不等于所有显卡、媒体格式及外部 AI 服务都已验证。
+然后提交 [Bug 报告](https://github.com/John201-del/phrasesplice/issues/new?template=bug_report.yml)，附系统版本、操作步骤和经过脱敏的错误文字。源码可编译不等于所有显卡、媒体格式及外部 AI 服务都已验证。
 
 ## 一起把“说话剪辑”做实用
 
@@ -122,6 +134,6 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\check-runtime.ps1
 
 ## 来源与许可证
 
-LocalCut 是 Kdenlive 的独立衍生项目，新增语言助手、结构化编辑桥、模板及本地媒体处理适配；基础编辑能力来自 Kdenlive、MLT、Qt、KDE Frameworks 和 FFmpeg。本项目不是 KDE 或 OpenAI 的官方产品。
+PhraseSplice 是 Kdenlive 的独立衍生项目，新增语言助手、结构化编辑桥、模板及本地媒体处理适配；基础编辑能力来自 Kdenlive、MLT、Qt、KDE Frameworks 和 FFmpeg。本项目不是 KDE 或 OpenAI 的官方产品。
 
 应用采用 [GPL v3](COPYING)，逐文件许可见 [LICENSES](LICENSES) 与 [REUSE.toml](REUSE.toml)。保留 [上游作者](AUTHORS) 署名。模型权重、字体、云素材和服务各有自己的条款，详见 [第三方说明](docs/THIRD_PARTY.md)。

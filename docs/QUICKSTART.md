@@ -1,4 +1,4 @@
-# LocalCut 使用指南
+# PhraseSplice 使用指南
 
 ## 基础安装与第一次导出
 
@@ -43,7 +43,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\setup-local-avatar
 
 本地 Whisper 字幕是进阶安装项：助手预期数据根内有 `speech-venv/Scripts/python.exe` 和 `cache/whisper/small.pt`。本预览版尚未提供经独立干净安装验收的一键 Whisper 安装器。未配置时请使用原生手工字幕，或按 Kdenlive 的语音识别设置完成环境；不要把识别按钮当作模型已安装。
 
-## 原生在线资源的账号
+## 云端视频、配音与在线素材
+
+查看 [云端功能一览](../README.md#云端功能)，了解 LTX 文生视频、Seedance 首帧图生视频、普通话配音与在线素材各自的入口和使用条件。
+
+### 原生在线资源的账号
 
 助手的 Wikimedia Commons 图片搜索不需要资源服务 Key。Kdenlive 原生在线资源面板中的 Freesound、Pexels 和 Pixabay 则使用你自己的服务凭据；LocalCut 不包含上游的共享 Key。
 
