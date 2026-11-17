@@ -204,7 +204,7 @@ void LayoutManagerDialog::resetToDefaults()
 
 void LayoutManagerDialog::importLayout()
 {
-    QString fileName = QFileDialog::getOpenFileName(this, i18n("Import Layout"), QString(), i18n("Kdenlive Layout (*.json)"));
+    QString fileName = QFileDialog::getOpenFileName(this, i18n("Import Layout"), QString(), i18n("PhraseSplice Layout (*.json)"));
     if (fileName.isEmpty()) return;
 
     QFile srcFile(fileName);
@@ -282,7 +282,7 @@ void LayoutManagerDialog::exportLayout()
         QMessageBox::warning(this, i18n("Export Layout"), i18n("Cannot find layout file for %1.", layoutId));
         return;
     }
-    QString fileName = UiUtils::getSaveFileName(this, i18n("Export Layout"), layoutId + ".json", i18n("Kdenlive Layout (*.json)"), QStringLiteral(".json"));
+    QString fileName = UiUtils::getSaveFileName(this, i18n("Export Layout"), layoutId + ".json", i18n("PhraseSplice Layout (*.json)"), QStringLiteral(".json"));
     if (fileName.isEmpty()) return;
 
     bool result = false;

@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0-preview.2",
+  "version": "0.1.0-preview.3",
   "kdenlive": {
     "url": "https://download.kde.org/stable/kdenlive/26.08/windows/kdenlive-26.08.3_standalone.exe",
     "sha256": "a25427b1dff2c17e3b0386e991bb1a719382bb3176d1a90e441cdaeb6e0a967d",
@@ -16,8 +16,8 @@
     "file": "7zr-26.06.exe"
   },
   "overlay": {
-    "file": "phrasesplice-windows-x64-0.1.0-preview.2.zip",
-    "sha256": "2b6c5191d09032a494f80182e829b47c583924fddd8d0840165cab8d396af5f5",
-    "url": "https://github.com/John201-del/phrasesplice/releases/download/v0.1.0-preview.2/phrasesplice-windows-x64-0.1.0-preview.2.zip"
+    "sha256": "ec76bc59aaea987b0a9ada0a560ce8df77d6ee0435594a90b548007640fcc153",
+    "file": "phrasesplice-windows-x64-0.1.0-preview.3.zip",
+    "url": "https://github.com/John201-del/phrasesplice/releases/download/v0.1.0-preview.3/phrasesplice-windows-x64-0.1.0-preview.3.zip"
   }
 }

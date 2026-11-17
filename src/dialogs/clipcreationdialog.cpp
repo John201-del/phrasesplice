@@ -446,7 +446,7 @@ void ClipCreationDialog::createClipsCommand(KdenliveDoc *doc, const QString &par
     QCheckBox *b = new QCheckBox(i18n("Import image sequence"));
     b->setToolTip(i18n("Try to import an image sequence"));
     b->setWhatsThis(
-        xi18nc("@info:whatsthis", "When enabled, Kdenlive will look for other images with the same name pattern and import them as an image sequence."));
+        xi18nc("@info:whatsthis", "When enabled, PhraseSplice will look for other images with the same name pattern and import them as an image sequence."));
     b->setChecked(KdenliveSettings::autoimagesequence());
     QCheckBox *bf = new QCheckBox(i18n("Ignore subfolder structure"));
     bf->setChecked(KdenliveSettings::ignoresubdirstructure());

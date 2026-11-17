@@ -1337,7 +1337,7 @@ void VideoWidget::startConsumer()
         // ARGH CONSUMER BROKEN!!!!
         KMessageBox::error(
             qApp->activeWindow(),
-            i18n("Could not create the video preview window.\nThere is something wrong with your Kdenlive install or your driver settings, please fix it."));
+            i18n("Could not create the video preview window.\nThere is something wrong with your PhraseSplice install or your driver settings, please fix it."));
         m_displayEvent.reset();
         m_consumer.reset();
         return;

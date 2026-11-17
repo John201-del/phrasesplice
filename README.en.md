@@ -16,7 +16,7 @@
 
 *PhraseSplice in use: waterfall footage in the player, alongside the timeline and AI assistant. [Watch or download the MP4 export with audio](docs/assets/localcut-demo.mp4), or [try the source sample](examples/localcut-nature.mp4). See [third-party notices](docs/THIRD_PARTY.md) for footage sources and licenses.*
 
-PhraseSplice was previously named LocalCut. Existing `.kdenlive` projects can be opened in the renamed Windows preview. When upgrading, install the preview in a new directory and reopen your existing projects.
+The Windows preview opens existing `.kdenlive` projects. When upgrading, install the preview in a new directory and reopen your existing projects.
 
 ## Highlights
 

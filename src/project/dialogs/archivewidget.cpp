@@ -375,7 +375,7 @@ void ArchiveWidget::openArchiveForExtraction()
     }
 
     if (!isProjectArchive) {
-        Q_EMIT showMessage(QStringLiteral("dialog-close"), i18n("File %1\n is not an archived Kdenlive project", m_extractUrl.toLocalFile()));
+        Q_EMIT showMessage(QStringLiteral("dialog-close"), i18n("File %1\n is not an archived PhraseSplice project", m_extractUrl.toLocalFile()));
         groupBox->setEnabled(false);
         buttonBox->button(QDialogButtonBox::Apply)->setEnabled(false);
         return;

@@ -296,7 +296,7 @@ int main(int argc, char *argv[])
     KLocalizedString::setLanguages({QStringLiteral("zh_CN")});
 
     // Create KAboutData
-    QString otherText = QStringLiteral("PhraseSplice 0.1.0-preview.2 — 基于 Kdenlive 的独立分支。<br>"
+    QString otherText = QStringLiteral("PhraseSplice 0.1.0-preview.3 — 基于 Kdenlive 的独立分支。<br>"
                                       "反馈：<a href=\"https://github.com/John201-del/phrasesplice/issues\">PhraseSplice issues</a><br>"
                                       "编辑器底座：<a href=\"https://kdenlive.org\">Kdenlive</a>。感谢原作者与贡献者。");
 
@@ -384,7 +384,7 @@ int main(int argc, char *argv[])
     QCommandLineOption renderOption(QStringLiteral("render"), i18n("Directly render the project and exit."));
     parser.addOption(renderOption);
 
-    QCommandLineOption presetOption(QStringLiteral("render-preset"), i18n("Kdenlive render preset name (MP4-H264/AAC will be used if none given)."),
+    QCommandLineOption presetOption(QStringLiteral("render-preset"), i18n("PhraseSplice render preset name (MP4-H264/AAC will be used if none given)."),
                                     QStringLiteral("renderPreset"), QString());
     parser.addOption(presetOption);
 
@@ -401,7 +401,7 @@ int main(int argc, char *argv[])
     QCommandLineOption saveDebugOption(QStringLiteral("setup-report"), i18n("Save a json report about components in the given path."), QStringLiteral("reportFile"));
     parser.addOption(saveDebugOption);
 
-    parser.addPositionalArgument(QStringLiteral("file"), i18n("Kdenlive document to open."));
+    parser.addPositionalArgument(QStringLiteral("file"), i18n("PhraseSplice document to open."));
     parser.addPositionalArgument(QStringLiteral("rendering"), i18n("Output file for rendered video."));
 
     // Parse command line

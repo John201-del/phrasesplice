@@ -164,7 +164,7 @@ bool Core::build(LinuxPackageType packageType, bool testMode, bool debugMode, bo
             if (KdenliveSettings::gpu_accel()) {
                 // Propose to disable movit
                 if (KMessageBox::questionTwoActions(QApplication::activeWindow(),
-                                                    i18n("Kdenlive crashed on last startup.\nDo you want to disable experimental GPU processing (Movit) ?"), {},
+                                                    i18n("PhraseSplice crashed on last startup.\nDo you want to disable experimental GPU processing (Movit) ?"), {},
                                                     KGuiItem(i18n("Disable GPU processing")), KStandardGuiItem::cont()) == KMessageBox::PrimaryAction) {
                     KdenliveSettings::setGpu_accel(false);
                 }
@@ -440,7 +440,7 @@ void Core::initGUI(const QString &MltPath, const QUrl &Url, const QStringList &c
     }
 
     if (!ProfileRepository::get()->profileExists(m_profile)) {
-        KMessageBox::error(m_mainWindow, i18n("The default profile of Kdenlive is not set or invalid, press OK to set it to a correct value."));
+        KMessageBox::error(m_mainWindow, i18n("The default profile of PhraseSplice is not set or invalid, press OK to set it to a correct value."));
 
         // TODO this simple widget should be improved and probably use profileWidget
         // we get the list of profiles
@@ -465,7 +465,7 @@ void Core::initGUI(const QString &MltPath, const QUrl &Url, const QStringList &c
         if (!ok) {
             KMessageBox::error(
                 m_mainWindow,
-                i18n("The given profile is invalid. We default to the profile \"dv_pal\", but you can change this from Kdenlive's settings panel"));
+                i18n("The given profile is invalid. We default to the profile \"dv_pal\", but you can change this from PhraseSplice's settings panel"));
             m_profile = QStringLiteral("dv_pal");
         }
         KdenliveSettings::setDefault_profile(m_profile);

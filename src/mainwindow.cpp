@@ -2968,7 +2968,7 @@ void MainWindow::slotRestart(bool clean)
 {
     if (clean) {
         if (KMessageBox::warningContinueCancel(this,
-                                               i18n("This will delete Kdenlive's configuration file and restart the application. Do you want to proceed?"),
+                                               i18n("This will delete PhraseSplice's configuration file and restart the application. Do you want to proceed?"),
                                                i18nc("@title:window", "Reset Configuration")) != KMessageBox::Continue) {
             return;
         }
@@ -5581,17 +5581,16 @@ void MainWindow::checkMaxCacheSize()
                             QAction *updateAction = new QAction(i18n("Go to download page"), this);
                             connect(updateAction, &QAction::triggered, this, []() {
                                 QDesktopServices::openUrl(
-                                    QUrl(QStringLiteral("https://kdenlive.org/download?mtm_campaign=kdenlive_inapp&mtm_kwd=update_reminder&mtm_content=%1")
-                                             .arg(KAboutData::applicationData().version())));
+                                    QUrl(QStringLiteral("https://github.com/John201-del/phrasesplice/releases")));
                             });
                             QAction *abortAction = new QAction(i18n("Never check again"), this);
                             connect(abortAction, &QAction::triggered, this, []() { KdenliveSettings::setCheckForUpdate(false); });
                             if (days > 360) {
-                                Q_EMIT pCore->displayBinMessage(i18n("Your Kdenlive version is older than 1 year, we strongly encourage you to upgrade"),
+                                Q_EMIT pCore->displayBinMessage(i18n("Your PhraseSplice version is older than 1 year, we strongly encourage you to upgrade"),
                                                                 KMessageWidget::Warning, {updateAction, abortAction}, true,
                                                                 BinMessage::BinCategory::UpdateMessage);
                             } else {
-                                Q_EMIT pCore->displayBinMessage(i18n("Your Kdenlive version is older than 6 months, we encourage you to upgrade"),
+                                Q_EMIT pCore->displayBinMessage(i18n("Your PhraseSplice version is older than 6 months, we encourage you to upgrade"),
                                                                 KMessageWidget::Information, {updateAction, abortAction}, true,
                                                                 BinMessage::BinCategory::UpdateMessage);
                             }

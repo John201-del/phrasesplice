@@ -16,7 +16,7 @@
 
 *PhraseSplice 实际工作界面：播放器显示瀑布素材，时间线与 AI 助手同时可见。[播放／下载有声 MP4 成片](docs/assets/localcut-demo.mp4) · [下载原始示例片段](examples/localcut-nature.mp4)，导入后即可体验。素材来源与许可见 [第三方说明](docs/THIRD_PARTY.md)。*
 
-PhraseSplice 原名 LocalCut。Windows 预览版使用新名称，原有 `.kdenlive` 工程可以继续打开。从旧版升级时，请另选安装目录，再打开原有工程。
+Windows 预览版可继续打开原有 `.kdenlive` 工程。从旧版升级时，请另选安装目录，再打开原有工程。
 
 ## 为什么做 PhraseSplice
 

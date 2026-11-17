@@ -66,7 +66,7 @@ SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
       <item row="1" column="0" colspan="2">
        <widget class="QLabel" name="label_18">
         <property name="text">
-         <string>Kdenlive will check this limit every 2 weeks. Set to zero to disable checking.</string>
+         <string>PhraseSplice will check this limit every 2 weeks. Set to zero to disable checking.</string>
         </property>
        </widget>
       </item>

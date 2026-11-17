@@ -2193,7 +2193,7 @@ void Bin::slotReloadClip()
                                 f.close();
                                 KMessageBox::information(
                                     this,
-                                    i18n("Your project file was modified by Kdenlive.\nTo make sure you do not lose data, a backup copy called %1 was created.",
+                                    i18n("Your project file was modified by PhraseSplice.\nTo make sure you do not lose data, a backup copy called %1 was created.",
                                          backupFile));
                             }
                         }
@@ -2896,7 +2896,7 @@ void Bin::createClip(const QDomElement &xml)
                     out << doc.toString();
                     f.close();
                     KMessageBox::information(
-                        this, i18n("Your project file was modified by Kdenlive.\nTo make sure you do not lose data, a backup copy called %1 was created.",
+                        this, i18n("Your project file was modified by PhraseSplice.\nTo make sure you do not lose data, a backup copy called %1 was created.",
                                    backupFile));
                 }
             }

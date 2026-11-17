@@ -15,7 +15,7 @@ Window {
     id: splash
     visible: true
     color: "transparent"
-    title: "Splash Screen"
+    title: "PhraseSplice"
     SystemPalette { id: activePalette }
     modality: Qt.WindowModal
     flags: crashRecovery ? Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint : Qt.SplashScreen | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint
@@ -143,7 +143,7 @@ Window {
             anchors.right: buttonBar.right
             anchors.rightMargin: 10
             anchors.verticalCenter: buttonBar.verticalCenter
-            text: KI18n.i18n("Kdenlive") + " " + splash.version
+            text: "PhraseSplice"
         }
         MouseArea {
             anchors.fill: parent
@@ -193,7 +193,7 @@ Window {
                 anchors.leftMargin: 10
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.right: restartButton.left
-                text: KI18n.i18n("Kdenlive crashed on last start.")
+                text: KI18n.i18n("PhraseSplice crashed on last start.")
                 Layout.alignment: Qt.AlignVCenter
                 wrapMode: Text.Wrap
             }
@@ -275,9 +275,7 @@ Window {
                 anchors.leftMargin: 10
                 anchors.right: notesButton.left
                 textFormat: Text.RichText
-                text: KI18n.i18n("Kdenlive was upgraded. If you like it, consider <a href=\"%1\">getting involved</a> or help <a href=\"%2\">funding</a>.",
-                           "https://kdenlive.org/get-involved/?mtm_campaign=kdenlive_inapp&mtm_kwd=splash_upgraded_contribute&mtm_content=" + splash.version,
-                           "https://kdenlive.org/fund/?mtm_campaign=kdenlive_inapp&mtm_kwd=splash_upgraded_donate&mtm_content=" + splash.version)
+                text: KI18n.i18n("PhraseSplice was upgraded.")
                 wrapMode: Text.Wrap
                 HoverHandler {
                     enabled: upgradedLabel.hoveredLink
@@ -293,7 +291,7 @@ Window {
                 property bool buttonPressed: false
                 text: KI18n.i18n("What's New")
                 icon.name: "help-contents"
-                onClicked: splash.openLink("https://kdenlive.org/news/releases/" + splash.version + "?mtm_campaign=kdenlive_inapp&mtm_kwd=splash_upgraded_notes")
+                onClicked: splash.openLink("https://github.com/John201-del/phrasesplice/releases")
                 Keys.onPressed: (event)=> {
                     if (event.key === Qt.Key_Return) {
                         buttonPressed = true

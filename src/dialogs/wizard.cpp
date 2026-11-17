@@ -59,13 +59,13 @@ Wizard::Wizard(bool autoClose, QWidget *parent)
     , m_systemCheckIsOk(false)
     , m_brokenModule(false)
 {
-    setWindowTitle(i18nc("@title:window", "Welcome to Kdenlive"));
+    setWindowTitle(i18nc("@title:window", "Welcome to PhraseSplice"));
     int logoHeight = int(fontMetrics().height() * 2.5);
     setWizardStyle(QWizard::ModernStyle);
     setOption(QWizard::NoBackButtonOnLastPage, true);
     // setOption(QWizard::ExtendedWatermarkPixmap, false);
     m_page = new MyWizardPage(this);
-    m_page->setTitle(i18n("Welcome to Kdenlive %1", QString(KDENLIVE_VERSION)));
+    m_page->setTitle(i18n("Welcome to PhraseSplice %1", QString(KDENLIVE_VERSION)));
     m_page->setSubTitle(i18n("Using MLT %1", mlt_version_get_string()));
     setPixmap(QWizard::LogoPixmap, QIcon::fromTheme(QStringLiteral(":/pics/kdenlive.png")).pixmap(logoHeight, logoHeight));
     m_startLayout = new QVBoxLayout;
@@ -349,7 +349,7 @@ void Wizard::checkMltComponents()
             // Breeze icons not found
             qDebug() << "Missing Breeze icons";
             m_warnings.append(
-                i18n("<li>Missing package: <b>Breeze</b> icons (breeze-icon-theme)<br/>provides many icons used in Kdenlive. Install recommended</li>"));
+                i18n("<li>Missing package: <b>Breeze</b> icons (breeze-icon-theme)<br/>provides many icons used in PhraseSplice. Install recommended</li>"));
         }
 #endif
 
@@ -678,7 +678,7 @@ void Wizard::slotCheckMlt()
 {
     QString errorMessage;
     if (KdenliveSettings::meltpath().isEmpty()) {
-        errorMessage.append(i18n("Your MLT installation cannot be found. Install MLT and restart Kdenlive.\n"));
+        errorMessage.append(i18n("Your MLT installation cannot be found. Install MLT and restart PhraseSplice.\n"));
     }
 
     if (!errorMessage.isEmpty()) {

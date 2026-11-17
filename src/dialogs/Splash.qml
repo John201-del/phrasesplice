@@ -16,6 +16,7 @@ import org.kde.ki18n
 
 Window {
     id: splash
+    title: "PhraseSplice"
     property string version
     property var urls: []
     property var fileNames: []
@@ -629,7 +630,7 @@ Window {
                     id: kdenliveid
                     anchors.right: parent.right
                     anchors.verticalCenter: parent.verticalCenter
-                    text: KI18n.i18n("Kdenlive") + " " + splash.version
+                    text: "PhraseSplice"
                 }
 
             }
@@ -652,7 +653,7 @@ Window {
                     anchors.left: parent.left
                     anchors.leftMargin: 10
                     anchors.right: restartButton.left
-                    text: KI18n.i18n("Kdenlive crashed on last start. Reset config and restart?")
+                    text: KI18n.i18n("PhraseSplice crashed on last start. Reset config and restart?")
                     Layout.alignment: Qt.AlignVCenter
                     wrapMode: Text.Wrap
                 }
@@ -688,9 +689,7 @@ Window {
                     anchors.left: parent.left
                     anchors.leftMargin: 10
                     anchors.right: notesButton.left
-                    text: KI18n.i18n("Kdenlive was upgraded. If you like it, consider <a href=\"%1\">getting involved</a> or help <a href=\"%2\">funding</a>.",
-                               "https://kdenlive.org/get-involved/?mtm_campaign=kdenlive_inapp&mtm_kwd=splash_upgraded_contribute&mtm_content=" + splash.version,
-                               "https://kdenlive.org/fund/?mtm_campaign=kdenlive_inapp&mtm_kwd=splash_upgraded_donate&mtm_content=" + splash.version)
+                    text: KI18n.i18n("PhraseSplice was upgraded.")
                     wrapMode: Text.Wrap
                     onLinkActivated: (link)=> splash.openLink(link)
                     textFormat: Text.RichText
@@ -707,7 +706,7 @@ Window {
                     enabled: splash.actionsEnabled
                     text: KI18n.i18n("What's New")
                     icon.name: "help-contents"
-                    onClicked: splash.openLink("https://kdenlive.org/news/releases/" + splash.version + "?mtm_campaign=kdenlive_inapp&mtm_kwd=splash_upgraded_notes&mtm_content=" + splash.version)
+                    onClicked: splash.openLink("https://github.com/John201-del/phrasesplice/releases")
                     KeyNavigation.tab: listView
                 }
             }
@@ -733,7 +732,7 @@ Window {
                         id: donateText
                         Layout.fillWidth: true
                         leftPadding: 10
-                        text: KI18n.i18n("Help us make Kdenlive even better")
+                        text: KI18n.i18n("Support the upstream editor")
                         wrapMode: Text.WordWrap
                     }
                     ToolButton {
@@ -797,7 +796,7 @@ Window {
                         Layout.fillWidth: true
                         textFormat: Text.StyledText
                         horizontalAlignment: Text.AlignJustify
-                        text: KI18n.i18n("<h3>Welcome to Kdenlive Quick Setup</h3>")
+                        text: KI18n.i18n("<h3>Welcome to PhraseSplice Quick Setup</h3>")
                     }
 
                     Switch {
@@ -1041,7 +1040,7 @@ Window {
                             anchors.rightMargin: parent.radius * 2
                             Label {
                                 id: restartWelcomeLabel
-                                text: KI18n.i18n("Kdenlive crashed on last start. Reset config and restart?")
+                                text: KI18n.i18n("PhraseSplice crashed on last start. Reset config and restart?")
                                 Layout.alignment: Qt.AlignVCenter
                                 wrapMode: Text.Wrap
                             }
@@ -1065,7 +1064,7 @@ Window {
                         text: KI18n.i18n("Check Online Documentation")
                         enabled: splash.actionsEnabled
                         Layout.alignment: Qt.AlignLeft
-                        onClicked: splash.openLink("https://docs.kdenlive.org?mtm_campaign=kdenlive_inapp&mtm_kwd=splash_dcumentation")
+                        onClicked: splash.openLink("https://github.com/John201-del/phrasesplice/blob/main/docs/QUICKSTART.md")
                     }
 
                     Button {

@@ -3,55 +3,55 @@
   <id>org.kde.kdenlive.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-only</project_license>
-  <developer_name translate="no">KDE</developer_name>
+  <developer_name translate="no">PhraseSplice contributors</developer_name>
   <branding>
     <color type="primary" scheme_preference="light">#CAE3FC</color>
     <color type="primary" scheme_preference="dark">#315C7F</color>
   </branding>
-  <name>Kdenlive</name>
-  <name xml:lang="ar">كدنلايف</name>
-  <name xml:lang="ast">Kdenlive</name>
-  <name xml:lang="az">Kdenlive</name>
-  <name xml:lang="bs">Kdenlive</name>
-  <name xml:lang="ca">Kdenlive</name>
-  <name xml:lang="ca-valencia">Kdenlive</name>
-  <name xml:lang="cs">Kdenlive</name>
-  <name xml:lang="da">Kdenlive</name>
-  <name xml:lang="de">Kdenlive</name>
-  <name xml:lang="el">Kdenlive</name>
-  <name xml:lang="en-GB">Kdenlive</name>
-  <name xml:lang="eo">Kdenlive</name>
-  <name xml:lang="es">Kdenlive</name>
-  <name xml:lang="et">Kdenlive</name>
-  <name xml:lang="eu">Kdenlive</name>
-  <name xml:lang="fi">Kdenlive</name>
-  <name xml:lang="fr">Kdenlive</name>
-  <name xml:lang="ga">Kdenlive</name>
-  <name xml:lang="gl">Kdenlive</name>
-  <name xml:lang="he">Kdenlive</name>
-  <name xml:lang="hi">केडेनलाइव</name>
-  <name xml:lang="id">Kdenlive</name>
-  <name xml:lang="it">Kdenlive</name>
-  <name xml:lang="ja">Kdenlive</name>
-  <name xml:lang="ka">Kdenlive</name>
-  <name xml:lang="ko">Kdenlive</name>
-  <name xml:lang="lo">Kdenlive</name>
-  <name xml:lang="lv">Kdenlive</name>
-  <name xml:lang="nl">Kdenlive</name>
-  <name xml:lang="nn">Kdenlive</name>
-  <name xml:lang="pl">Kdenlive</name>
-  <name xml:lang="pt">Kdenlive</name>
-  <name xml:lang="pt-BR">Kdenlive</name>
-  <name xml:lang="ru">Kdenlive</name>
-  <name xml:lang="sa">क्डेन्लिव्</name>
-  <name xml:lang="sk">Kdenlive</name>
-  <name xml:lang="sl">Kdenlive</name>
-  <name xml:lang="sv">Kdenlive</name>
-  <name xml:lang="tr">Kdenlive</name>
-  <name xml:lang="ug">Kdenlive</name>
-  <name xml:lang="uk">Kdenlive</name>
-  <name xml:lang="zh-CN">Kdenlive</name>
-  <name xml:lang="zh-TW">Kdenlive</name>
+  <name>PhraseSplice</name>
+  <name xml:lang="ar">PhraseSplice</name>
+  <name xml:lang="ast">PhraseSplice</name>
+  <name xml:lang="az">PhraseSplice</name>
+  <name xml:lang="bs">PhraseSplice</name>
+  <name xml:lang="ca">PhraseSplice</name>
+  <name xml:lang="ca-valencia">PhraseSplice</name>
+  <name xml:lang="cs">PhraseSplice</name>
+  <name xml:lang="da">PhraseSplice</name>
+  <name xml:lang="de">PhraseSplice</name>
+  <name xml:lang="el">PhraseSplice</name>
+  <name xml:lang="en-GB">PhraseSplice</name>
+  <name xml:lang="eo">PhraseSplice</name>
+  <name xml:lang="es">PhraseSplice</name>
+  <name xml:lang="et">PhraseSplice</name>
+  <name xml:lang="eu">PhraseSplice</name>
+  <name xml:lang="fi">PhraseSplice</name>
+  <name xml:lang="fr">PhraseSplice</name>
+  <name xml:lang="ga">PhraseSplice</name>
+  <name xml:lang="gl">PhraseSplice</name>
+  <name xml:lang="he">PhraseSplice</name>
+  <name xml:lang="hi">PhraseSplice</name>
+  <name xml:lang="id">PhraseSplice</name>
+  <name xml:lang="it">PhraseSplice</name>
+  <name xml:lang="ja">PhraseSplice</name>
+  <name xml:lang="ka">PhraseSplice</name>
+  <name xml:lang="ko">PhraseSplice</name>
+  <name xml:lang="lo">PhraseSplice</name>
+  <name xml:lang="lv">PhraseSplice</name>
+  <name xml:lang="nl">PhraseSplice</name>
+  <name xml:lang="nn">PhraseSplice</name>
+  <name xml:lang="pl">PhraseSplice</name>
+  <name xml:lang="pt">PhraseSplice</name>
+  <name xml:lang="pt-BR">PhraseSplice</name>
+  <name xml:lang="ru">PhraseSplice</name>
+  <name xml:lang="sa">PhraseSplice</name>
+  <name xml:lang="sk">PhraseSplice</name>
+  <name xml:lang="sl">PhraseSplice</name>
+  <name xml:lang="sv">PhraseSplice</name>
+  <name xml:lang="tr">PhraseSplice</name>
+  <name xml:lang="ug">PhraseSplice</name>
+  <name xml:lang="uk">PhraseSplice</name>
+  <name xml:lang="zh-CN">PhraseSplice</name>
+  <name xml:lang="zh-TW">PhraseSplice</name>
   <summary>Video editor</summary>
   <summary xml:lang="ar">محرّر فيديوهات</summary>
   <summary xml:lang="ca">Editor de vídeo</summary>
@@ -87,38 +87,38 @@
   <summary xml:lang="zh-CN">视频编辑器</summary>
   <summary xml:lang="zh-TW">影片編輯軟體</summary>
   <description>
-    <p>Kdenlive is a video editing application with support for many audio and video formats. It offers advanced editing features, a variety of effects and transitions, color correction, audio post-production and subtitling tools. Additionally, it provides the flexibility to render into practically any format of your choice.</p>
-    <p xml:lang="ar">كدنلايف هو تطبيق لتحرير الفيديو يدعم العديد من تنسيقات الصوت والفيديو. فهو يوفر ميزات تحرير متقدمة، ومجموعة متنوعة من التأثيرات والانتقالات، وتصحيح الألوان، وأدوات ما بعد الإنتاج الصوتي وترجمة الأفلام.بالإضافة إلى ذلك، فهو يوفر المرونة اللازمة للتصيير  إلى أي تنسيق من اختيارك.</p>
-    <p xml:lang="ca">El Kdenlive és una aplicació d'edició de vídeo amb suport per a molts formats d'àudio i vídeo. Ofereix funcions avançades d'edició, una gran varietat d'efectes i transicions, correcció de color, postproducció d'àudio i eines de subtitulació. A més, proporciona la flexibilitat per a convertir pràcticament a qualsevol format de la vostra elecció.</p>
-    <p xml:lang="ca-valencia">Kdenlive és una aplicació d'edició de vídeo amb suport per a molts formats d'àudio i vídeo. Oferix característiques avançades d'edició, una gran varietat d'efectes i transicions, correcció de color, postproducció d'àudio i eines de subtitulació. A més, proporciona la flexibilitat per a convertir pràcticament a qualsevol format de la vostra elecció.</p>
-    <p xml:lang="de">Kdenlive ist ein Videobearbeitungsprogramm, das viele Audio- und Videoformate unterstützt. Es bietet erweiterte Bearbeitungsfunktionen, eine Vielzahl von Effekten und Übergängen, Farbkorrektur, Audio-Nachbearbeitung und Untertitelungswerkzeuge. Darüber hinaus bietet es die Flexibilität, ein Video in praktisch jedes Format Ihrer Wahl zu rendern.</p>
-    <p xml:lang="en-GB">Kdenlive is a video editing application with support for many audio and video formats. It offers advanced editing features, a variety of effects and transitions, colour correction, audio post-production and subtitling tools. Additionally, it provides the flexibility to render into practically any format of your choice.</p>
-    <p xml:lang="eo">Kdenlive estas videoredakta aplikaĵo kun subteno por multaj audaĵaj kaj vidaĵaj formatoj. Ĝi ofertas altnivelajn redaktajn funkciojn, diversajn efektojn kaj transirojn, kolorkorektado, aŭda postproduktado kaj subtitolaj iloj. Aldone, ĝi provizas la flekseblecon por redoni en preskaŭ ajna formato de via elekto.</p>
-    <p xml:lang="es">Kdenlive es una aplicación de edición de video con soporte para una variedad de formatos de audio y video. Ofrece características avanzadas de edición, múltiples efectos y transiciones, corrección de color, posproducción de audio y herramientas de subtitulado. Adicionalmente, permite la exportación a prácticamente cualquier formato de audio y video existente.</p>
-    <p xml:lang="eu">Kdenlive, audio- eta bideo-formatu askorako euskarria duen bideoa editatzeko tresna bat da. Edizio-funtzio aurreratuak eskaintzen ditu, efektu eta trantsizio ezberdinak, kolore-zuzenketa, audio post-produkzioa eta azpidatzietarako tresnak. Gainera, aukeratzen duzun ia edozein formatutan errendatzeko malgutasuna ematen du.</p>
-    <p xml:lang="fi">Kdenlive on videomuokkaussovellus, joka tukee monia ääni- ja videomuotoja. Se työkalut tarjoavat edistyneet muokkausominaisuudet, joukon tehosteita ja siirtymiä, värinkorjauksen, äänen jälkituotannon sekä tekstityksen. Lisäksi se tarjoaa joustoa hahmontaa tuloksen lähes mihin tahansa haluamaasi muotoon.</p>
-    <p xml:lang="fr">Kdenlive est une application de montage vidéo prenant en charge de nombreux formats audio et vidéo. Il offre des fonctionnalités d'édition avancées, une variété d'effets et de transitions, une correction des couleurs, une post-production audio et des outils de sous-titrage. En outre, il offre la flexibilité de faire un rendu dans pratiquement n'importe quel format de votre choix.</p>
-    <p xml:lang="ga">Is feidhmchlár eagarthóireachta físe é Kdenlive a thacaíonn le go leor formáidí fuaime agus físe. Cuireann sé gnéithe eagarthóireachta chun cinn, réimse éifeachtaí agus aistrithe, ceartú datha, iarléiriú fuaime agus uirlisí fotheidealaithe ar fáil. Ina theannta sin, cuireann sé an tsolúbthacht ar fáil chun rindreáil i mbeagnach aon fhormáid is rogha leat.</p>
-    <p xml:lang="gl">Kdenlive é unha aplicación de edición de vídeo para moitos formatos de son e de vídeo. Fornece funcionalidades avanzadas de edición, varios efectos e transicións, corrección de cor, post-produción de son e ferramentas de subtítulos. Ademais, fornece a flexibilidade de renderizar en calquera formato da súa escolla.</p>
-    <p xml:lang="he">Kdenlive הוא יישום לעריכת וידאו עם תמיכה במגוון סוגים של וידאו ושמע. הוא מציע יכולות עריכה מתקדמות, שלל אפקטים ומעברונים, תיקון צבע, הפקת פוסט של שמע וכלי כתוביות. בנוסף, הוא מספק את הגמישות לעבד לכמעט כל סוג אפשרי שיש לבחירתך.</p>
-    <p xml:lang="hi">Kdenlive एक वीडियो संपादन एप्लिकेशन है जो कई ऑडियो और वीडियो प्रारूपों के लिए समर्थन प्रदान करता है। यह उन्नत संपादन सुविधाएँ, विभिन्न प्रकार के प्रभाव और संक्रमण, रंग सुधार, ऑडियो पोस्ट-प्रोडक्शन और उपशीर्षक उपकरण प्रदान करता है। इसके अतिरिक्त, यह आपकी पसंद के व्यावहारिक रूप से किसी भी प्रारूप में रेंडर करने की सुविधा प्रदान करता है।</p>
-    <p xml:lang="id">Kdenlive adalah aplikasi pengeditan video yang mendukung banyak format audio dan video. Aplikasi ini menawarkan fitur pengeditan tingkat lanjut, berbagai efek dan transisi, koreksi warna, pascaproduksi audio, dan alat subtitel. Selain itu, aplikasi ini menyediakan fleksibilitas untuk melakukan render ke hampir semua format pilihan Anda.</p>
-    <p xml:lang="it">Kdenlive è un'applicazione di editing video che supporta molti formati audio e video. Offre funzionalità avanzate di modifica, un assortimento di effetti e transizioni, correzione del colore, strumenti per la post-produzione audio e la sottotitolazione. In aggiunta, fornisce la flessibilità di produrre praticamente in qualsiasi formato tu desideri.</p>
-    <p xml:lang="ka">Kdenlive ვიდეორედაქტორია ბევრი აუდიო და ვიდეოფორმატების მხარდაჭერით. ის გთავაზობთ დამატებითი ჩასწორების ფუნქციებს, მრავალ ეფექტსა და გადასვლას, ფერის შესწორებას, აუდიოს პოსტ-პროდაქშენს და სუბტიტრების მორგებას. დამატებით, ის გაძლევთ საშუალებას, დაარენდეროთ პრაქტიკულად ნებისმიერ ფორმატში, რომელსაც აირჩევთ.</p>
-    <p xml:lang="lo">Kdenlive ແມ່ນແອັບພລິເຄຊັນຕັດຕໍ່ວິດີໂອທີ່ຮອງຮັບຮູບແບບສຽງ ແລະ ວິດີໂອທີ່ຫຼາກຫຼາຍ. ມັນມີຄຸນສົມບັດການຕັດຕໍ່ຂັ້ນສູງ, ເອັບເຟັກ ແລະ ການປ່ຽນຜ່ານ (transitions) ທີ່ຫຼາກຫຼາຍ, ການປັບແກ້ສີ, ການປັບແຕ່ງສຽງຫຼັງການຜະລິດ ແລະ ເຄື່ອງມືໃສ່ຄຳບັນຍາຍ. ນອກຈາກນັ້ນ, ມັນຍັງມີຄວາມຢືດຢຸ່ນໃນການເຣັນເດີ (render) ເປັນຮູບແບບຕ່າງໆແທບທຸກປະເພດຕາມທີ່ທ່ານຕ້ອງການ.</p>
-    <p xml:lang="lv">„Kdenlive“ ir video rediģēšanas programma ar daudzu audio un video formātu atbalstu. Tā sniedz plašas rediģēšanas iespējas, dažādus efektus un pārejas, krāsu korekcijas iespējas, skaņas pēcapstrādes un subtitru rīkus. Turklāt „Kdenlive“ ļauj renderēt praktiski jebkurā formātā pēc jūsu izvēles.</p>
-    <p xml:lang="nl">Kdenlive is een toepassing voor video bewerken met ondersteuning voor vele audio- en videoformaten. Het biedt geavanceerde bewerkingsfuncties, een verscheidenheid aan effecten en transities, kleurcorrectie, audio nabewerking en hulpmiddelen voor ondertiteling. Bovendien levert het de flexibiliteit om te renderen in praktisch elk formaat van uw keuze.</p>
-    <p xml:lang="pl">Kdenlive jest aplikacją do edytowania wideo z obsługą wielu formatów dźwięku i obrazu. Daje rozbudowane możliwości, wiele efektów i przejść, poprawianie barw, po-produkcję dźwięki oraz narzędzia do napisów. Dodatkowo, zapewnia możliwość zapisania do właściwie dowolnego formatu jaki sobie wybierzesz.</p>
-    <p xml:lang="pt-BR">Kdenlive é um aplicativo de edição de vídeo com suporte para vários formatos de áudio e vídeo. Ele oferece recursos avançados de edição, uma variedade de efeitos e transições, correção de cores, pós-produção de áudio e ferramentas de legenda. Além disso, fornece a flexibilidade para renderizar em praticamente qualquer formato que você escolher.</p>
-    <p xml:lang="ru">Kdenlive — видеоредактор, поддерживающий различные форматы аудио- и видеозаписей. Программа предоставляет расширенные возможности редактирования, широкий ряд эффектов и переходов, инструменты цветокоррекции, окончательного монтажа аудио и наложения субтитров. Кроме того, гибкость настройки программы позволяет получить на выходе файл практически любого формата.</p>
-    <p xml:lang="sa">Kdenlive इति एकः विडियो सम्पादन-अनुप्रयोगः अस्ति यस्य समर्थनं बहुषु श्रव्य-वीडियो-स्वरूपेषु भवति । अस्मिन् उन्नतसम्पादनविशेषताः, विविधाः प्रभावाः संक्रमणाः च, वर्णशुद्धिः, श्रव्य-उत्तरनिर्माणं, उपशीर्षकसाधनं च प्राप्यते । तदतिरिक्तं, भवतः पसन्दस्य व्यावहारिकरूपेण कस्मिन् अपि प्रारूपे प्रतिपादयितुं लचीलापनं प्रदाति ।</p>
-    <p xml:lang="sk">Kdenlive is a video editing application with support for many audio and video formats. It offers advanced editing features, a variety of effects and transitions, color correction, audio post-production and subtitling tools. Additionally, it provides the flexibility to render into practically any format of your choice.</p>
-    <p xml:lang="sl">Kdenlive je program za montažo videoposnetkov s podporo za številne zvokovne in video zapise. Ponuja napredne funkcije montaže, urejanja, različne učinke in prehode, korekcijo barv, poprodukcijo zvoka in orodja za podnaslavljanje. Poleg tega zagotavlja prilagodljivost za izrisovanje v praktično poljuben zapis po vašem izboru.</p>
-    <p xml:lang="sv">Kdenlive är ett videoredigeringsprogram med stöd för många ljud- och videoformat. Det erbjuder avancerade redigeringsfunktioner, en mängd olika effekter och övergångar, färgkorrigering, efterproduktion av ljud och textningsverktyg. Dessutom ger det flexibiliteten att återge till praktiskt taget vilket format som helst.</p>
-    <p xml:lang="tr">Kdenlive, birçok ses ve video biçimini destekleyen bir video düzenleme uygulamasıdır. Gelişmiş düzenleme özellikleri, çeşitli efektler ve geçişler, renk düzeltme, ses post-prodüksiyon ve altyazı araçları sunar. Ek olarak, neredeyse seçtiğiniz herhangi bir biçime dönüştürme esnekliği de sağlar.</p>
-    <p xml:lang="uk">Kdenlive — програма для редагування відео із підтримкою багатьох форматів даних відео та звуку. У ній реалізовано широкі можливості з редагування, спектр ефектів та переходів, виправлення кольорів, остаточну обробку звуку та засоби субтитрування. Крім того, програма здатна гнучко обробляти дані практично до будь-якого вибраного вами формату.</p>
-    <p xml:lang="zh-CN">Kdenlive 是一款视频编辑应用程序，支持多种音视频格式。它提供了各种高级编辑功能、种类丰富的效果和转场、色彩校正、音频后处理和字幕工具。它还能灵活地将视频输出为您需要的任意格式。</p>
-    <p xml:lang="zh-TW">Kdenlive 是支援許多音訊與影片格式的影片編輯軟體。它提供進階的剪輯功能、許多的效果、轉場特效、顏色校正、音效後製與字幕工具等等。它也支援輸出到基本上任何您所想要使用的格式。</p>
+    <p>PhraseSplice is a video editing application with support for many audio and video formats. It offers advanced editing features, a variety of effects and transitions, color correction, audio post-production and subtitling tools. Additionally, it provides the flexibility to render into practically any format of your choice.</p>
+    <p xml:lang="ar">PhraseSplice هو تطبيق لتحرير الفيديو يدعم العديد من تنسيقات الصوت والفيديو. فهو يوفر ميزات تحرير متقدمة، ومجموعة متنوعة من التأثيرات والانتقالات، وتصحيح الألوان، وأدوات ما بعد الإنتاج الصوتي وترجمة الأفلام.بالإضافة إلى ذلك، فهو يوفر المرونة اللازمة للتصيير  إلى أي تنسيق من اختيارك.</p>
+    <p xml:lang="ca">El PhraseSplice és una aplicació d'edició de vídeo amb suport per a molts formats d'àudio i vídeo. Ofereix funcions avançades d'edició, una gran varietat d'efectes i transicions, correcció de color, postproducció d'àudio i eines de subtitulació. A més, proporciona la flexibilitat per a convertir pràcticament a qualsevol format de la vostra elecció.</p>
+    <p xml:lang="ca-valencia">PhraseSplice és una aplicació d'edició de vídeo amb suport per a molts formats d'àudio i vídeo. Oferix característiques avançades d'edició, una gran varietat d'efectes i transicions, correcció de color, postproducció d'àudio i eines de subtitulació. A més, proporciona la flexibilitat per a convertir pràcticament a qualsevol format de la vostra elecció.</p>
+    <p xml:lang="de">PhraseSplice ist ein Videobearbeitungsprogramm, das viele Audio- und Videoformate unterstützt. Es bietet erweiterte Bearbeitungsfunktionen, eine Vielzahl von Effekten und Übergängen, Farbkorrektur, Audio-Nachbearbeitung und Untertitelungswerkzeuge. Darüber hinaus bietet es die Flexibilität, ein Video in praktisch jedes Format Ihrer Wahl zu rendern.</p>
+    <p xml:lang="en-GB">PhraseSplice is a video editing application with support for many audio and video formats. It offers advanced editing features, a variety of effects and transitions, colour correction, audio post-production and subtitling tools. Additionally, it provides the flexibility to render into practically any format of your choice.</p>
+    <p xml:lang="eo">PhraseSplice estas videoredakta aplikaĵo kun subteno por multaj audaĵaj kaj vidaĵaj formatoj. Ĝi ofertas altnivelajn redaktajn funkciojn, diversajn efektojn kaj transirojn, kolorkorektado, aŭda postproduktado kaj subtitolaj iloj. Aldone, ĝi provizas la flekseblecon por redoni en preskaŭ ajna formato de via elekto.</p>
+    <p xml:lang="es">PhraseSplice es una aplicación de edición de video con soporte para una variedad de formatos de audio y video. Ofrece características avanzadas de edición, múltiples efectos y transiciones, corrección de color, posproducción de audio y herramientas de subtitulado. Adicionalmente, permite la exportación a prácticamente cualquier formato de audio y video existente.</p>
+    <p xml:lang="eu">PhraseSplice, audio- eta bideo-formatu askorako euskarria duen bideoa editatzeko tresna bat da. Edizio-funtzio aurreratuak eskaintzen ditu, efektu eta trantsizio ezberdinak, kolore-zuzenketa, audio post-produkzioa eta azpidatzietarako tresnak. Gainera, aukeratzen duzun ia edozein formatutan errendatzeko malgutasuna ematen du.</p>
+    <p xml:lang="fi">PhraseSplice on videomuokkaussovellus, joka tukee monia ääni- ja videomuotoja. Se työkalut tarjoavat edistyneet muokkausominaisuudet, joukon tehosteita ja siirtymiä, värinkorjauksen, äänen jälkituotannon sekä tekstityksen. Lisäksi se tarjoaa joustoa hahmontaa tuloksen lähes mihin tahansa haluamaasi muotoon.</p>
+    <p xml:lang="fr">PhraseSplice est une application de montage vidéo prenant en charge de nombreux formats audio et vidéo. Il offre des fonctionnalités d'édition avancées, une variété d'effets et de transitions, une correction des couleurs, une post-production audio et des outils de sous-titrage. En outre, il offre la flexibilité de faire un rendu dans pratiquement n'importe quel format de votre choix.</p>
+    <p xml:lang="ga">Is feidhmchlár eagarthóireachta físe é PhraseSplice a thacaíonn le go leor formáidí fuaime agus físe. Cuireann sé gnéithe eagarthóireachta chun cinn, réimse éifeachtaí agus aistrithe, ceartú datha, iarléiriú fuaime agus uirlisí fotheidealaithe ar fáil. Ina theannta sin, cuireann sé an tsolúbthacht ar fáil chun rindreáil i mbeagnach aon fhormáid is rogha leat.</p>
+    <p xml:lang="gl">PhraseSplice é unha aplicación de edición de vídeo para moitos formatos de son e de vídeo. Fornece funcionalidades avanzadas de edición, varios efectos e transicións, corrección de cor, post-produción de son e ferramentas de subtítulos. Ademais, fornece a flexibilidade de renderizar en calquera formato da súa escolla.</p>
+    <p xml:lang="he">PhraseSplice הוא יישום לעריכת וידאו עם תמיכה במגוון סוגים של וידאו ושמע. הוא מציע יכולות עריכה מתקדמות, שלל אפקטים ומעברונים, תיקון צבע, הפקת פוסט של שמע וכלי כתוביות. בנוסף, הוא מספק את הגמישות לעבד לכמעט כל סוג אפשרי שיש לבחירתך.</p>
+    <p xml:lang="hi">PhraseSplice एक वीडियो संपादन एप्लिकेशन है जो कई ऑडियो और वीडियो प्रारूपों के लिए समर्थन प्रदान करता है। यह उन्नत संपादन सुविधाएँ, विभिन्न प्रकार के प्रभाव और संक्रमण, रंग सुधार, ऑडियो पोस्ट-प्रोडक्शन और उपशीर्षक उपकरण प्रदान करता है। इसके अतिरिक्त, यह आपकी पसंद के व्यावहारिक रूप से किसी भी प्रारूप में रेंडर करने की सुविधा प्रदान करता है।</p>
+    <p xml:lang="id">PhraseSplice adalah aplikasi pengeditan video yang mendukung banyak format audio dan video. Aplikasi ini menawarkan fitur pengeditan tingkat lanjut, berbagai efek dan transisi, koreksi warna, pascaproduksi audio, dan alat subtitel. Selain itu, aplikasi ini menyediakan fleksibilitas untuk melakukan render ke hampir semua format pilihan Anda.</p>
+    <p xml:lang="it">PhraseSplice è un'applicazione di editing video che supporta molti formati audio e video. Offre funzionalità avanzate di modifica, un assortimento di effetti e transizioni, correzione del colore, strumenti per la post-produzione audio e la sottotitolazione. In aggiunta, fornisce la flessibilità di produrre praticamente in qualsiasi formato tu desideri.</p>
+    <p xml:lang="ka">PhraseSplice ვიდეორედაქტორია ბევრი აუდიო და ვიდეოფორმატების მხარდაჭერით. ის გთავაზობთ დამატებითი ჩასწორების ფუნქციებს, მრავალ ეფექტსა და გადასვლას, ფერის შესწორებას, აუდიოს პოსტ-პროდაქშენს და სუბტიტრების მორგებას. დამატებით, ის გაძლევთ საშუალებას, დაარენდეროთ პრაქტიკულად ნებისმიერ ფორმატში, რომელსაც აირჩევთ.</p>
+    <p xml:lang="lo">PhraseSplice ແມ່ນແອັບພລິເຄຊັນຕັດຕໍ່ວິດີໂອທີ່ຮອງຮັບຮູບແບບສຽງ ແລະ ວິດີໂອທີ່ຫຼາກຫຼາຍ. ມັນມີຄຸນສົມບັດການຕັດຕໍ່ຂັ້ນສູງ, ເອັບເຟັກ ແລະ ການປ່ຽນຜ່ານ (transitions) ທີ່ຫຼາກຫຼາຍ, ການປັບແກ້ສີ, ການປັບແຕ່ງສຽງຫຼັງການຜະລິດ ແລະ ເຄື່ອງມືໃສ່ຄຳບັນຍາຍ. ນອກຈາກນັ້ນ, ມັນຍັງມີຄວາມຢືດຢຸ່ນໃນການເຣັນເດີ (render) ເປັນຮູບແບບຕ່າງໆແທບທຸກປະເພດຕາມທີ່ທ່ານຕ້ອງການ.</p>
+    <p xml:lang="lv">„PhraseSplice“ ir video rediģēšanas programma ar daudzu audio un video formātu atbalstu. Tā sniedz plašas rediģēšanas iespējas, dažādus efektus un pārejas, krāsu korekcijas iespējas, skaņas pēcapstrādes un subtitru rīkus. Turklāt „PhraseSplice“ ļauj renderēt praktiski jebkurā formātā pēc jūsu izvēles.</p>
+    <p xml:lang="nl">PhraseSplice is een toepassing voor video bewerken met ondersteuning voor vele audio- en videoformaten. Het biedt geavanceerde bewerkingsfuncties, een verscheidenheid aan effecten en transities, kleurcorrectie, audio nabewerking en hulpmiddelen voor ondertiteling. Bovendien levert het de flexibiliteit om te renderen in praktisch elk formaat van uw keuze.</p>
+    <p xml:lang="pl">PhraseSplice jest aplikacją do edytowania wideo z obsługą wielu formatów dźwięku i obrazu. Daje rozbudowane możliwości, wiele efektów i przejść, poprawianie barw, po-produkcję dźwięki oraz narzędzia do napisów. Dodatkowo, zapewnia możliwość zapisania do właściwie dowolnego formatu jaki sobie wybierzesz.</p>
+    <p xml:lang="pt-BR">PhraseSplice é um aplicativo de edição de vídeo com suporte para vários formatos de áudio e vídeo. Ele oferece recursos avançados de edição, uma variedade de efeitos e transições, correção de cores, pós-produção de áudio e ferramentas de legenda. Além disso, fornece a flexibilidade para renderizar em praticamente qualquer formato que você escolher.</p>
+    <p xml:lang="ru">PhraseSplice — видеоредактор, поддерживающий различные форматы аудио- и видеозаписей. Программа предоставляет расширенные возможности редактирования, широкий ряд эффектов и переходов, инструменты цветокоррекции, окончательного монтажа аудио и наложения субтитров. Кроме того, гибкость настройки программы позволяет получить на выходе файл практически любого формата.</p>
+    <p xml:lang="sa">PhraseSplice इति एकः विडियो सम्पादन-अनुप्रयोगः अस्ति यस्य समर्थनं बहुषु श्रव्य-वीडियो-स्वरूपेषु भवति । अस्मिन् उन्नतसम्पादनविशेषताः, विविधाः प्रभावाः संक्रमणाः च, वर्णशुद्धिः, श्रव्य-उत्तरनिर्माणं, उपशीर्षकसाधनं च प्राप्यते । तदतिरिक्तं, भवतः पसन्दस्य व्यावहारिकरूपेण कस्मिन् अपि प्रारूपे प्रतिपादयितुं लचीलापनं प्रदाति ।</p>
+    <p xml:lang="sk">PhraseSplice is a video editing application with support for many audio and video formats. It offers advanced editing features, a variety of effects and transitions, color correction, audio post-production and subtitling tools. Additionally, it provides the flexibility to render into practically any format of your choice.</p>
+    <p xml:lang="sl">PhraseSplice je program za montažo videoposnetkov s podporo za številne zvokovne in video zapise. Ponuja napredne funkcije montaže, urejanja, različne učinke in prehode, korekcijo barv, poprodukcijo zvoka in orodja za podnaslavljanje. Poleg tega zagotavlja prilagodljivost za izrisovanje v praktično poljuben zapis po vašem izboru.</p>
+    <p xml:lang="sv">PhraseSplice är ett videoredigeringsprogram med stöd för många ljud- och videoformat. Det erbjuder avancerade redigeringsfunktioner, en mängd olika effekter och övergångar, färgkorrigering, efterproduktion av ljud och textningsverktyg. Dessutom ger det flexibiliteten att återge till praktiskt taget vilket format som helst.</p>
+    <p xml:lang="tr">PhraseSplice, birçok ses ve video biçimini destekleyen bir video düzenleme uygulamasıdır. Gelişmiş düzenleme özellikleri, çeşitli efektler ve geçişler, renk düzeltme, ses post-prodüksiyon ve altyazı araçları sunar. Ek olarak, neredeyse seçtiğiniz herhangi bir biçime dönüştürme esnekliği de sağlar.</p>
+    <p xml:lang="uk">PhraseSplice — програма для редагування відео із підтримкою багатьох форматів даних відео та звуку. У ній реалізовано широкі можливості з редагування, спектр ефектів та переходів, виправлення кольорів, остаточну обробку звуку та засоби субтитрування. Крім того, програма здатна гнучко обробляти дані практично до будь-якого вибраного вами формату.</p>
+    <p xml:lang="zh-CN">PhraseSplice 是一款视频编辑应用程序，支持多种音视频格式。它提供了各种高级编辑功能、种类丰富的效果和转场、色彩校正、音频后处理和字幕工具。它还能灵活地将视频输出为您需要的任意格式。</p>
+    <p xml:lang="zh-TW">PhraseSplice 是支援許多音訊與影片格式的影片編輯軟體。它提供進階的剪輯功能、許多的效果、轉場特效、顏色校正、音效後製與字幕工具等等。它也支援輸出到基本上任何您所想要使用的格式。</p>
     <p>Features:</p>
     <p xml:lang="ar">الميزات:</p>
     <p xml:lang="az">İmkanlar:</p>
@@ -884,14 +884,14 @@
       <url>https://kdenlive.org/news/releases/23.08.5/</url>
     </release>
   </releases>
-  <url type="homepage">https://kdenlive.org/?mtm_campaign=appstream_data&amp;mtm_kwd=homepage</url>
-  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=kdenlive</url>
-  <url type="help">https://docs.kdenlive.org/?mtm_campaign=appstream_data&amp;mtm_kwd=help</url>
+  <url type="homepage">https://github.com/John201-del/phrasesplice</url>
+  <url type="bugtracker">https://github.com/John201-del/phrasesplice/issues</url>
+  <url type="help">https://github.com/John201-del/phrasesplice/blob/main/docs/QUICKSTART.md</url>
   <url type="donation">https://kdenlive.org/fund/?mtm_campaign=appstream_data&amp;mtm_kwd=donation</url>
-  <url type="contact">https://kdenlive.org/support/?mtm_campaign=appstream_data&amp;mtm_kwd=contact</url>
-  <url type="contribute">https://kdenlive.org/get-involved/?mtm_campaign=appstream_data&amp;mtm_kwd=contribute</url>
+  <url type="contact">https://github.com/John201-del/phrasesplice/issues</url>
+  <url type="contribute">https://github.com/John201-del/phrasesplice/blob/main/CONTRIBUTING.md</url>
   <url type="translate">https://l10n.kde.org/</url>
-  <url type="vcs-browser">https://invent.kde.org/multimedia/kdenlive</url>
+  <url type="vcs-browser">https://github.com/John201-del/phrasesplice</url>
   <screenshots>
     <screenshot type="default">
       <caption>Dark theme</caption>

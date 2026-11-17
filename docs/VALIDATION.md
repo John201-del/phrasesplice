@@ -54,9 +54,9 @@ The published `v0.1.0-preview.1` source and package passed both remote checks on
 
 Both runs publish their evidence as workflow artifacts. These checks cover the basic Windows package and listed suites; they do not replace the optional-model and account-specific checks below.
 
-## PhraseSplice Windows preview 2
+## PhraseSplice Windows preview 3
 
-On 2026-11-16 the renamed `v0.1.0-preview.2` candidate was built with Craft and installed into a new directory with the pinned official dependencies. `Start-PhraseSplice.cmd` launched the editor with the PhraseSplice window title. The actual GUI opened a pre-rename `.kdenlive` project with two linked A/V segments, Chinese subtitles, and a source media filename containing Chinese characters and spaces. The assistant's Export button produced a 1920×1080 H.264/AAC MP4 with 100 frames at 25 fps and a 4.01-second container duration. Full decoding passed and the original project hash stayed unchanged. The local D-drive configuration produced the same export SHA-256. No live AI or optional model requests were made during this rename check.
+On 2026-11-17 the `v0.1.0-preview.3` candidate was built with Craft and installed into a new directory with the pinned official dependencies. `Start-PhraseSplice.cmd` launched the editor with the PhraseSplice window title. The actual GUI opened a pre-rename `.kdenlive` project with two linked A/V segments, Chinese subtitles, and a source media filename containing Chinese characters and spaces. The assistant's Export button produced a 1920×1080 H.264/AAC MP4 with 100 frames at 25 fps and a 4.01-second container duration. Full decoding passed and the original project hash stayed unchanged. The isolated startup recovery window reported the PhraseSplice title. The Open dialog used the PhraseSplice project label and recognized the existing `.kdenlive` extension. The renamed desktop shortcut also launched the candidate with the separate local D-drive Qt configuration. No live AI or optional model requests were made during this rename check.
 
 ## Public scenic demonstration
 

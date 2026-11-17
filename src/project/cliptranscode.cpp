@@ -119,7 +119,7 @@ void ClipTranscode::slotStartTransCode()
     }
     if (KdenliveSettings::ffmpegpath().isEmpty()) {
         // FFmpeg not detected, cannot process the Job
-        log_text->setPlainText(i18n("FFmpeg not found, please set path in Kdenlive's settings Environment"));
+        log_text->setPlainText(i18n("FFmpeg not found, please set path in PhraseSplice's settings Environment"));
         slotTranscodeFinished(1, QProcess::CrashExit);
         return;
     }

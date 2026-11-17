@@ -43,7 +43,7 @@ PreviewManager::PreviewManager(Mlt::Tractor *tractor, QUuid uuid, QObject *paren
         Wizard::fixKdenliveRenderPath();
         if (KdenliveSettings::kdenliverendererpath().isEmpty()) {
             KMessageBox::error(QApplication::activeWindow(),
-                               i18n("Could not find the kdenlive_render application, something is wrong with your installation. Rendering will not work"));
+                               i18n("The PhraseSplice renderer is missing. Reinstall the complete application to enable rendering."));
         }
     }
 

@@ -226,14 +226,14 @@ DocOpenResult KdenliveDoc::Open(const QUrl &url, const QString &projectFolder, Q
     bool success = validator.isProject();
     if (!success) {
         // It is not a project file
-        result.setError(i18n("File %1 is not a Kdenlive project file", url.toLocalFile()));
+        result.setError(i18n("File %1 is not a PhraseSplice project file", url.toLocalFile()));
         return result;
     }
 
     auto validationResult = validator.validate(DOCUMENTVERSION, DOCUMENTPATCHVERSION);
     success = validationResult.first;
     if (!success) {
-        result.setError(i18n("File %1 is not a valid Kdenlive project file.", url.toLocalFile()));
+        result.setError(i18n("File %1 is not a valid PhraseSplice project file.", url.toLocalFile()));
         return result;
     }
 
@@ -246,7 +246,7 @@ DocOpenResult KdenliveDoc::Open(const QUrl &url, const QString &projectFolder, Q
         success = validator.checkMovit();
     }
     if (!success) {
-        result.setError(i18n("GPU acceleration is turned off in Kdenlive settings, but is required for this project's Movit filters."));
+        result.setError(i18n("GPU acceleration is turned off in PhraseSplice settings, but is required for this project's Movit filters."));
         return result;
     }
 
@@ -748,11 +748,11 @@ bool KdenliveDoc::saveSceneList(const QString &path, const QString &scene, bool 
         QString message;
         if (m_documentOpenStatus == UpgradedProject) {
             message =
-                i18n("Your project file was upgraded to the latest Kdenlive document version.\nTo make sure you do not lose data, a backup copy called %1 "
+                i18n("Your project file was upgraded to the latest PhraseSplice document version.\nTo make sure you do not lose data, a backup copy called %1 "
                      "was created.",
                      backupFile);
         } else {
-            message = i18n("Your project file was modified by Kdenlive.\nTo make sure you do not lose data, a backup copy called %1 was created.", backupFile);
+            message = i18n("Your project file was modified by PhraseSplice.\nTo make sure you do not lose data, a backup copy called %1 was created.", backupFile);
         }
 
         KIO::FileCopyJob *copyjob = KIO::file_copy(QUrl::fromLocalFile(path), QUrl::fromLocalFile(backupFile));
@@ -762,7 +762,7 @@ bool KdenliveDoc::saveSceneList(const QString &path, const QString &scene, bool 
         } else {
             KMessageBox::information(
                 QApplication::activeWindow(),
-                i18n("Your project file was upgraded to the latest Kdenlive document version, but it was not possible to create the backup copy %1.",
+                i18n("Your project file was upgraded to the latest PhraseSplice document version, but it was not possible to create the backup copy %1.",
                      backupFile));
         }
     }

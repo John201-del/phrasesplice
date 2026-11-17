@@ -223,7 +223,7 @@ MediaBrowser::MediaBrowser(QWidget *parent)
     connect(b2, &QCheckBox::toggled, this, [](bool enabled) { KdenliveSettings::setAutoimagesequence(enabled); });
     b2->setToolTip(i18n("Try to import an image sequence"));
     b2->setWhatsThis(
-        xi18nc("@info:whatsthis", "When enabled, Kdenlive will look for other images with the same name pattern and import them as an image sequence."));
+        xi18nc("@info:whatsthis", "When enabled, PhraseSplice will look for other images with the same name pattern and import them as an image sequence."));
     hlay3->addWidget(b2);
     hlay3->addWidget(b);
     lay->addWidget(tb);

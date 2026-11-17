@@ -41340,3 +41340,39 @@ msgstr "%1 小时"
 #~ msgstr ""
 #~ "时间码,帧编号,文件名,基本名称,创建日期,文件日期 (GMT) ,文件日期 (本地) ,源"
 #~ "帧率,源编解码器,源比特率,源宽度,源高度,源注释"
+
+msgid "PhraseSplice Project"
+msgstr "PhraseSplice 工程"
+
+msgid "PhraseSplice Layout (*.json)"
+msgstr "PhraseSplice 布局 (*.json)"
+
+msgid "PhraseSplice title"
+msgstr "PhraseSplice 标题"
+
+msgid "PhraseSplice Effect definitions"
+msgstr "PhraseSplice 效果定义"
+
+msgid "PhraseSplice JSON"
+msgstr "PhraseSplice JSON"
+
+msgid "PhraseSplice crashed on last start."
+msgstr "PhraseSplice 上次启动时发生了崩溃。"
+
+msgid "PhraseSplice crashed on last start. Reset config and restart?"
+msgstr "PhraseSplice 上次启动时发生了崩溃。要重置配置并重启吗？"
+
+msgid "PhraseSplice was upgraded."
+msgstr "PhraseSplice 已更新。"
+
+msgid "Support the upstream editor"
+msgstr "支持上游剪辑器"
+
+msgid "<h3>Welcome to PhraseSplice Quick Setup</h3>"
+msgstr "<h3>欢迎使用 PhraseSplice 快速设置</h3>"
+
+msgid "PhraseSplice must be restarted to change this setting"
+msgstr "重启 PhraseSplice 后，此设置才会生效"
+
+msgid "The PhraseSplice renderer is missing. Reinstall the complete application to enable rendering."
+msgstr "缺少 PhraseSplice 渲染组件。请重新安装完整程序后再导出。"

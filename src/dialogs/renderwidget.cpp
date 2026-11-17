@@ -524,7 +524,7 @@ RenderWidget::RenderWidget(bool enableProxy, QWidget *parent)
         }
     }
     if (KdenliveSettings::kdenliverendererpath().isEmpty()) {
-        KMessageBox::error(this, i18n("Could not find the kdenlive_render application, something is wrong with your installation. Rendering will not work"));
+        KMessageBox::error(this, i18n("The PhraseSplice renderer is missing. Reinstall the complete application to enable rendering."));
     }
 
 #ifndef NODBUS

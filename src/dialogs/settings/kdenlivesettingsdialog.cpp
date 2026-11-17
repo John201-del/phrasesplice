@@ -1496,7 +1496,7 @@ void KdenliveSettingsDialog::updateSettings()
     bool restart = false;
     if (m_configSdl.kcfg_gpu_accel->isChecked() != KdenliveSettings::gpu_accel()) {
         // GPU setting was changed, we need to restart Kdenlive or everything will be corrupted
-        if (KMessageBox::warningContinueCancel(this, i18n("Kdenlive must be restarted to change this setting")) == KMessageBox::Continue) {
+        if (KMessageBox::warningContinueCancel(this, i18n("PhraseSplice must be restarted to change this setting")) == KMessageBox::Continue) {
             restart = true;
         } else {
             m_configSdl.kcfg_gpu_accel->setChecked(KdenliveSettings::gpu_accel());

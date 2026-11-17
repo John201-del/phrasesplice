@@ -2708,7 +2708,7 @@ void Monitor::slotSwitchCompare(bool enable)
                 m_splitEffect->set("2", -0.747); // 2 is tilt
             } else {
                 // frei0r.alphagrad is not available
-                warningMessage(i18n("The alphagrad filter is required for that feature, please install frei0r and restart Kdenlive"));
+                warningMessage(i18n("The alphagrad filter is required for that feature, please install frei0r and restart PhraseSplice"));
                 return;
             }
             Q_EMIT createSplitOverlay(m_splitEffect);
@@ -2765,14 +2765,14 @@ void Monitor::buildSplitEffect(Mlt::Producer *original)
         m_splitEffect->set("2", -0.747); // 2 is tilt
     } else {
         // frei0r.alphagrad is not available
-        pCore->displayMessage(i18n("The alphagrad filter is required for that feature, please install frei0r and restart Kdenlive"), ErrorMessage);
+        pCore->displayMessage(i18n("The alphagrad filter is required for that feature, please install frei0r and restart PhraseSplice"), ErrorMessage);
         return;
     }
     QString splitTransition = TransitionsRepository::get()->getCompositingTransition();
     Mlt::Transition t(pCore->getProjectProfile(), splitTransition.toUtf8().constData());
     if (!t.is_valid()) {
         m_splitEffect.reset();
-        pCore->displayMessage(i18n("The cairoblend transition is required for that feature, please install frei0r and restart Kdenlive"), ErrorMessage);
+        pCore->displayMessage(i18n("The cairoblend transition is required for that feature, please install frei0r and restart PhraseSplice"), ErrorMessage);
         return;
     }
     Mlt::Tractor trac(pCore->getProjectProfile());
