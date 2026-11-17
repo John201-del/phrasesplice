@@ -32,7 +32,7 @@ Package and test your own build:
 
 ```powershell
 pwsh -NoProfile -File .\scripts\package-overlay.ps1
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\install-windows.ps1 -OverlayArchive .\dist\phrasesplice-windows-x64-0.1.0-preview.3.zip
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\install-windows.ps1 -OverlayArchive .\dist\phrasesplice-windows-x64-0.1.0-preview.4.zip
 .\Start-PhraseSplice.cmd
 ```
 
