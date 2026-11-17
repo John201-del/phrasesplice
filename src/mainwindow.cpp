@@ -1014,6 +1014,7 @@ void MainWindow::loadContainerActions()
     KStandardAction::helpContents(this, &MainWindow::appHelpActivated, actionCollection());
     officialHelp = actionCollection()->action(KStandardAction::name(KStandardAction::HelpContents));
     officialHelp->setShortcuts(helpShortcuts);
+    officialHelp->setText(i18n("PhraseSplice Handbook"));
     // Replug it in the Help menu
     QMenu *helpMenu = static_cast<QMenu *>(factory()->container(QStringLiteral("help"), this));
     if (helpMenu) {
@@ -5815,72 +5816,9 @@ void MainWindow::disconnectTimeline(TimelineWidget *timeline, bool onClose)
     disconnect(pCore.get(), &Core::recordAudio, timeline->controller(), &TimelineController::switchRecording);
 }
 
-// Static
-QProcessEnvironment MainWindow::getCleanEnvironement()
-{
-    QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
-    qDebug() << "::: GOT ENV: " << env.value("LD_LIBRARY_PATH") << ", PATH: " << env.value("PATH") << "\n\nXDG:\n" << env.value("XDG_DATA_DIRS");
-    QStringList libPath = env.value(QStringLiteral("LD_LIBRARY_PATH")).split(QLatin1Char(':'), Qt::SkipEmptyParts);
-    QStringList updatedLDPath;
-    for (auto &s : libPath) {
-        if (!s.startsWith(QStringLiteral("/tmp/.mount_"))) {
-            updatedLDPath << s;
-        }
-    }
-    if (updatedLDPath.isEmpty()) {
-        env.remove(QStringLiteral("LD_LIBRARY_PATH"));
-    } else {
-        env.insert(QStringLiteral("LD_LIBRARY_PATH"), updatedLDPath.join(QLatin1Char(':')));
-    }
-    // Path
-    libPath = env.value(QStringLiteral("PATH")).split(QLatin1Char(':'), Qt::SkipEmptyParts);
-    updatedLDPath.clear();
-    for (auto &s : libPath) {
-        if (!s.startsWith(QStringLiteral("/tmp/.mount_"))) {
-            updatedLDPath << s;
-        }
-    }
-    if (updatedLDPath.isEmpty()) {
-        env.remove(QStringLiteral("PATH"));
-    } else {
-        env.insert(QStringLiteral("PATH"), updatedLDPath.join(QLatin1Char(':')));
-    }
-    // XDG
-    libPath = env.value(QStringLiteral("XDG_DATA_DIRS")).split(QLatin1Char(':'), Qt::SkipEmptyParts);
-    updatedLDPath.clear();
-    for (auto &s : libPath) {
-        if (!s.startsWith(QStringLiteral("/tmp/.mount_"))) {
-            updatedLDPath << s;
-        }
-    }
-    if (updatedLDPath.isEmpty()) {
-        env.remove(QStringLiteral("XDG_DATA_DIRS"));
-    } else {
-        env.insert(QStringLiteral("XDG_DATA_DIRS"), updatedLDPath.join(QLatin1Char(':')));
-    }
-    env.remove(QStringLiteral("QT_QPA_PLATFORM"));
-    return env;
-}
-
 void MainWindow::appHelpActivated()
 {
-    // Don't use default help, show our website
-    // QDesktopServices::openUrl(QUrl(QStringLiteral("help:kdenlive")));
-    const QString helpUrl =
-        QStringLiteral("https://docs.kdenlive.org?mtm_campaign=kdenlive_inapp&mtm_kwd=help_action&mtm_content=%1").arg(KAboutData::applicationData().version());
-    if (pCore->packageType() == LinuxPackageType::AppImage) {
-        qDebug() << "::::: LAUNCHING APPIMAGE BROWSER.........";
-        QProcessEnvironment env = getCleanEnvironement();
-        QProcess process;
-        process.setProcessEnvironment(env);
-        QString openPath = QStandardPaths::findExecutable(QStringLiteral("xdg-open"));
-        qDebug() << "------------\nFOUND OPEN PATH: " << openPath;
-        process.setProgram(openPath.isEmpty() ? QStringLiteral("xdg-open") : openPath);
-        process.setArguments({helpUrl});
-        process.startDetached();
-    } else {
-        QDesktopServices::openUrl(QUrl(helpUrl));
-    }
+    pCore->openDocumentationLink(QUrl(QStringLiteral("phrasesplice-help:")));
 }
 
 void MainWindow::slotCreateSequenceFromSelection()

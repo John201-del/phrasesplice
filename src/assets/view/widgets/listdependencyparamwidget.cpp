@@ -23,6 +23,10 @@ ListDependencyParamWidget::ListDependencyParamWidget(std::shared_ptr<AssetParame
     m_infoMessage->hide();
     connect(m_infoMessage, &KMessageWidget::linkActivated, this, [this](const QString &contents) {
         const QUrl linkUrl(contents);
+        if (linkUrl.scheme() == QLatin1String("phrasesplice-help")) {
+            pCore->openDocumentationLink(linkUrl);
+            return;
+        }
         if (linkUrl.isLocalFile()) {
             // Ensure folder or file exists
             QFileInfo info(linkUrl.toLocalFile());

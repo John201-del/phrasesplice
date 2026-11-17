@@ -4,9 +4,11 @@
 
 使用 Windows 11 x64，把仓库放在可写的英文目录。双击根目录的 `Start-PhraseSplice.cmd`。第一次需要联网下载；后续启动会校验应用文件并复用运行目录。
 
-不要只复制 `kdenlive.exe`，它依赖同一运行包中的 Qt、KDE、MLT、解码库和资源文件。安装失败会显示具体错误，不会自动忽略校验或转用不明镜像。
+请保留整个运行包。编辑器需要其中的 Qt、KDE、MLT、解码库和资源文件。安装失败会显示具体错误，不会自动忽略校验或转用不明镜像。
 
 导入一个短视频，先在原生时间线上预览，然后导出 MP4。普通手工剪辑不需要连接 Codex。自动安装脚本仅面向已发布的 Windows 版本；修改源码后要先按 [BUILD.md](BUILD.md) 构建和打包自己的组件。
+
+在软件中选择「帮助 → PhraseSplice 帮助手册」或按 F1，即可离线查看使用说明。
 
 ## 连接语言助手
 
@@ -41,7 +43,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\setup-local-avatar
 
 安装器从原发布者下载依赖和模型，并在已提供校验值的模型上验证 SHA-256。失败时保留可续用的下载缓存，重新执行会复用完整文件。当前可选安装流程仍有大型网络依赖，尚不属于每次基础运行包验收的范围。不要把“基础剪辑验收通过”理解为所有模型均已在你的电脑上验证。
 
-本地 Whisper 字幕是进阶安装项：助手预期数据根内有 `speech-venv/Scripts/python.exe` 和 `cache/whisper/small.pt`。本预览版尚未提供经独立干净安装验收的一键 Whisper 安装器。未配置时请使用原生手工字幕，或按 Kdenlive 的语音识别设置完成环境；不要把识别按钮当作模型已安装。
+本地 Whisper 字幕是进阶安装项：助手预期数据根内有 `speech-venv/Scripts/python.exe` 和 `cache/whisper/small.pt`。本预览版尚未提供经独立干净安装验收的一键 Whisper 安装器。未配置时请使用原生手工字幕，或按软件的语音识别设置完成环境；不要把识别按钮当作模型已安装。
 
 ## 云端视频、配音与在线素材
 
@@ -49,7 +51,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\setup-local-avatar
 
 ### 原生在线资源的账号
 
-助手的 Wikimedia Commons 图片搜索不需要资源服务 Key。Kdenlive 原生在线资源面板中的 Freesound、Pexels 和 Pixabay 则使用你自己的服务凭据；PhraseSplice 不包含上游的共享 Key。
+助手的 Wikimedia Commons 图片搜索不需要资源服务 Key。主界面的在线资源面板中的 Freesound、Pexels 和 Pixabay 则使用你自己的服务凭据；PhraseSplice 不包含上游的共享 Key。
 
 在启动 PhraseSplice 的同一个 PowerShell 窗口中，按需要设置 `LOCALCUT_FREESOUND_API_KEY`、`LOCALCUT_PEXELS_API_KEY` 或 `LOCALCUT_PIXABAY_API_KEY`，然后运行 `Start-PhraseSplice.cmd`。缺少对应 Key 时，该服务会提示所需变量并停止请求。环境变量从启动时继承，修改后需要重启程序；不要把实际 Key 保存到仓库脚本、Issue 或截图中。
 

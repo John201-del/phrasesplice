@@ -296,13 +296,14 @@ int main(int argc, char *argv[])
     KLocalizedString::setLanguages({QStringLiteral("zh_CN")});
 
     // Create KAboutData
-    QString otherText = QStringLiteral("PhraseSplice 0.1.0-preview.3 — 基于 Kdenlive 的独立分支。<br>"
-                                      "反馈：<a href=\"https://github.com/John201-del/phrasesplice/issues\">PhraseSplice issues</a><br>"
-                                      "编辑器底座：<a href=\"https://kdenlive.org\">Kdenlive</a>。感谢原作者与贡献者。");
+    QString otherText = QStringLiteral("PhraseSplice 0.1.0-preview.4<br>"
+                                       "反馈：<a href=\"https://github.com/John201-del/phrasesplice/issues\">PhraseSplice issues</a><br>"
+                                       "上游来源与署名：<a href=\"https://github.com/John201-del/phrasesplice/blob/main/docs/THIRD_PARTY.md\">第三方说明</a>");
 
-    KAboutData aboutData(QByteArray("kdenlive"), QStringLiteral("PhraseSplice AI 剪辑台"), KDENLIVE_VERSION,
-                         QStringLiteral("自然语言驱动的剪辑工作台，基于 Kdenlive。"), KAboutLicense::GPL_V3,
-                         i18n("Copyright © 2007–2025 Kdenlive authors"), otherText, QStringLiteral("https://github.com/John201-del/phrasesplice"));
+    KAboutData aboutData(QByteArray("kdenlive"), QStringLiteral("PhraseSplice AI 剪辑台"), KDENLIVE_VERSION, QStringLiteral("自然语言驱动的剪辑工作台。"),
+                         KAboutLicense::GPL_V3, i18n("Copyright © 2007–2025 Kdenlive authors"), otherText,
+                         QStringLiteral("https://github.com/John201-del/phrasesplice"));
+    aboutData.setBugAddress(QByteArray("https://github.com/John201-del/phrasesplice/issues/new/choose"));
     // main developers (alphabetical)
     aboutData.addAuthor(i18n("Jean-Baptiste Mardelle"), i18n("Core team member, main developer and maintainer, MLT, and KDE SC 4 / KF5 port"), QStringLiteral("jb@kdenlive.org"));
     // active developers with major involvement

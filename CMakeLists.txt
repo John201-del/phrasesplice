@@ -189,11 +189,6 @@ else()
     set(DATA_INSTALL_PREFIX "/kdenlive")
 endif()
 
-if(KF${KF_MAJOR}DocTools_FOUND)
-    add_subdirectory(doc)
-    kdoctools_install(po)
-endif()
-
 # Get current version.
 set(KDENLIVE_VERSION_STRING "${KDENLIVE_VERSION}")
 if(EXISTS ${CMAKE_SOURCE_DIR}/.git)

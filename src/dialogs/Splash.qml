@@ -732,21 +732,21 @@ Window {
                         id: donateText
                         Layout.fillWidth: true
                         leftPadding: 10
-                        text: KI18n.i18n("Support the upstream editor")
+                        text: KI18n.i18n("Help improve PhraseSplice")
                         wrapMode: Text.WordWrap
                     }
                     ToolButton {
                         icon.name: "user-group-new"
                         text: KI18n.i18n("Contribute…")
                         enabled: splash.actionsEnabled
-                        onClicked: splash.openLink("https://kdenlive.org/get-involved?mtm_campaign=kdenlive_inapp&mtm_kwd=splash_donatebar_contribute&mtm_content=" + splash.version)
+                        onClicked: splash.openLink("https://github.com/John201-del/phrasesplice/blob/main/CONTRIBUTING.md")
                     }
 
                     ToolButton {
-                        text: KI18n.i18n("Donate…")
+                        text: KI18n.i18n("Credits")
                         icon.name: "donate"
                         enabled: splash.actionsEnabled
-                        onClicked: splash.openLink("https://kdenlive.org/fund?mtm_campaign=kdenlive_inapp&mtm_kwd=splash_donatebar_donate&mtm_content=" + splash.version)
+                        onClicked: splash.openLink("https://github.com/John201-del/phrasesplice/blob/main/docs/THIRD_PARTY.md")
                         KeyNavigation.tab: listView
                     }
 
@@ -1061,10 +1061,10 @@ Window {
                     Button {
                         id: buttonHelp
                         icon.name: "help-browser"
-                        text: KI18n.i18n("Check Online Documentation")
+                        text: KI18n.i18n("PhraseSplice Handbook")
                         enabled: splash.actionsEnabled
                         Layout.alignment: Qt.AlignLeft
-                        onClicked: splash.openLink("https://github.com/John201-del/phrasesplice/blob/main/docs/QUICKSTART.md")
+                        onClicked: splash.openLink("phrasesplice-help:")
                     }
 
                     Button {

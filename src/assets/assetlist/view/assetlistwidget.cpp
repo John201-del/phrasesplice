@@ -10,7 +10,6 @@
 #include "kdenlivesettings.h"
 #include "mltconnection.h"
 
-#include <KAboutData>
 #include <KMessageBox>
 #include <KMessageWidget>
 #include <KNSCore/Entry>
@@ -585,9 +584,9 @@ void AssetListWidget::updateAssetInfo(const QModelIndex &current, const QModelIn
             // Add link to our documentation
             const QString link = buildLink(id, type);
             if (!description.isEmpty()) {
-                description.append(QStringLiteral("<br/><a title=\"%1\" href=\"%2\">%3</a>").arg(i18nc("@info:tooltip", "Online documentation"), link, id));
+                description.append(QStringLiteral("<br/><a title=\"%1\" href=\"%2\">%3</a>").arg(i18nc("@info:tooltip", "PhraseSplice Handbook"), link, id));
             } else {
-                description = QStringLiteral("<a title=\"%1\" href=\"%2\">%3</a>").arg(i18nc("@info:tooltip", "Online documentation"), link, id);
+                description = QStringLiteral("<a title=\"%1\" href=\"%2\">%3</a>").arg(i18nc("@info:tooltip", "PhraseSplice Handbook"), link, id);
             }
         }
         m_infoDocument->setHtml(description);
@@ -599,27 +598,16 @@ void AssetListWidget::updateAssetInfo(const QModelIndex &current, const QModelIn
 // static
 const QString AssetListWidget::buildLink(const QString &id, AssetListType::AssetType type)
 {
-    QString prefix;
-    if (type == AssetListType::AssetType::Audio) {
-        prefix = QStringLiteral("effect_link");
-    } else if (type == AssetListType::AssetType::Video) {
-        prefix = QStringLiteral("effect_link");
-    } else if (type == AssetListType::AssetType::AudioComposition || type == AssetListType::AssetType::AudioTransition) {
-        prefix = QStringLiteral("transition_link");
-    } else if (type == AssetListType::AssetType::VideoShortComposition || type == AssetListType::AssetType::VideoComposition ||
-               type == AssetListType::AssetType::VideoTransition) {
-        prefix = QStringLiteral("transition_link");
-    } else if (type == AssetListType::AssetType::LumaTransition) {
-        // Link to local file
+    if (type == AssetListType::AssetType::LumaTransition) {
         if (QFileInfo(id).isRelative()) {
             return QString();
         }
-        return QStringLiteral("file:///%1").arg(id);
-    } else {
-        prefix = QStringLiteral("other");
+        return QUrl::fromLocalFile(id).toString();
     }
-    return QStringLiteral("https://docs.kdenlive.org/%1/%2?mtm_campaign=inapp_asset_link&mtm_kwd=%3&mtm_campaign=%4")
-        .arg(prefix, id, id, KAboutData::applicationData().version());
+    const bool transition = type == AssetListType::AssetType::AudioComposition || type == AssetListType::AssetType::AudioTransition ||
+                            type == AssetListType::AssetType::VideoShortComposition || type == AssetListType::AssetType::VideoComposition ||
+                            type == AssetListType::AssetType::VideoTransition;
+    return transition ? QStringLiteral("phrasesplice-help:transitions") : QStringLiteral("phrasesplice-help:effects");
 }
 
 bool AssetListWidget::infoPanelIsFocused()

@@ -19,6 +19,7 @@ $files = @()
 foreach ($item in $items) {
     if ($item.PSIsContainer -or $item.Name -match '\.(a|cmake|pdb|debug|h)$') { continue }
     $relative = [IO.Path]::GetRelativePath($installed, $item.FullName).Replace('\','/')
+    if ($relative -match '^bin/data/doc/HTML/[^/]+/kdenlive/') { continue }
     $target = Join-Path $destination $relative
     [IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName($target)) | Out-Null
     [IO.File]::Copy($item.FullName, $target, $false)

@@ -47,10 +47,13 @@ SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 #include <QCoreApplication>
 #include <QDesktopServices>
+#include <QDialogButtonBox>
 #include <QDir>
 #include <QImageReader>
 #include <QInputDialog>
 #include <QQuickStyle>
+#include <QTextBrowser>
+#include <QVBoxLayout>
 
 static bool m_inhibitHideBarTimer{false};
 
@@ -2288,6 +2291,25 @@ void Core::showEffectStackFromId(ObjectId owner)
 
 void Core::openDocumentationLink(const QUrl &link)
 {
+    if (link.scheme() == QLatin1String("phrasesplice-help")) {
+        QDialog dialog(QApplication::activeWindow());
+        dialog.setWindowTitle(i18n("PhraseSplice Handbook"));
+        dialog.resize(820, 680);
+        auto *layout = new QVBoxLayout(&dialog);
+        auto *browser = new QTextBrowser(&dialog);
+        layout->addWidget(browser);
+        const QString language = KLocalizedString::languages().value(0, QLocale().name());
+        const QString guide = language.startsWith(QLatin1String("zh"), Qt::CaseInsensitive) ? QStringLiteral("zh") : QStringLiteral("en");
+        browser->setSource(QUrl(QStringLiteral("qrc:/help/handbook-%1.html").arg(guide)));
+        if (!link.path().isEmpty()) {
+            browser->scrollToAnchor(link.path());
+        }
+        auto *buttons = new QDialogButtonBox(QDialogButtonBox::Close, &dialog);
+        connect(buttons, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
+        layout->addWidget(buttons);
+        dialog.exec();
+        return;
+    }
     if (link.isEmpty()) {
         // Silently abort
         return;
@@ -2297,8 +2319,7 @@ void Core::openDocumentationLink(const QUrl &link)
         return;
     }
     if (KMessageBox::questionTwoActions(
-            QApplication::activeWindow(),
-            i18n("This will open a browser to display Kdenlive's online documentation at the following url:\n %1", link.toDisplayString()), {},
+            QApplication::activeWindow(), i18n("This will open the following documentation link in your browser:\n %1", link.toDisplayString()), {},
             KGuiItem(i18n("Open Browser")), KStandardGuiItem::cancel(), QStringLiteral("allow_browser_help")) == KMessageBox::SecondaryAction) {
         // Stop
         return;
@@ -2308,8 +2329,11 @@ void Core::openDocumentationLink(const QUrl &link)
 
 void Core::openLink(const QUrl &link)
 {
-    if (link.host() != QLatin1String("kdenlive.org") && link.host() != QLatin1String("docs.kdenlive.org") &&
-        KMessageBox::questionTwoActions(QApplication::activeWindow(), i18n("This will open a browser to display a link:\n %1", link.toDisplayString()), {},
+    if (link.scheme() == QLatin1String("phrasesplice-help")) {
+        openDocumentationLink(link);
+        return;
+    }
+    if (KMessageBox::questionTwoActions(QApplication::activeWindow(), i18n("This will open a browser to display a link:\n %1", link.toDisplayString()), {},
                                         KGuiItem(i18n("Open Browser")), KStandardGuiItem::cancel(),
                                         QStringLiteral("allow_browser_help")) == KMessageBox::SecondaryAction) {
         // Stop

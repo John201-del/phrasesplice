@@ -98,7 +98,7 @@ CollapsibleEffectView::CollapsibleEffectView(const QString &effectName, const st
     m_collapse->setActive(m_model->isCollapsed());
     connect(m_collapse, &KDualAction::activeChanged, this, &CollapsibleEffectView::slotSwitch);
     infoButton->setIcon(QIcon::fromTheme(QStringLiteral("help-about")));
-    infoButton->setToolTip(i18n("Open effect documentation in browser"));
+    infoButton->setToolTip(i18n("Open effect documentation"));
     connect(infoButton, &QToolButton::clicked, this, [this]() {
         const QString id = m_model->getAssetId();
         AssetListType::AssetType type = EffectsRepository::get()->getType(id);

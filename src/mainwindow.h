@@ -204,7 +204,6 @@ public:
     bool raiseTimeline(const QUuid &uuid);
     void connectTimeline();
     void disconnectTimeline(TimelineWidget *timeline, bool onClose = false);
-    static QProcessEnvironment getCleanEnvironement();
     ObjectId effectStackOwner();
     bool effectIsMasterOnly(const QString &assetId) const;
     void reloadAssetPanel();

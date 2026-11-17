@@ -34,9 +34,6 @@
 #include <QTimer>
 #include <QXmlStreamWriter>
 
-#include <KIO/JobUiDelegateFactory>
-#include <KIO/OpenUrlJob>
-
 // Recommended MLT version
 MyWizardPage::MyWizardPage(QWidget *parent)
     : QWizardPage(parent)
@@ -103,7 +100,7 @@ Wizard::Wizard(bool autoClose, QWidget *parent)
     }
     if (!m_errors.isEmpty() || !m_warnings.isEmpty() || (!m_infos.isEmpty())) {
         QLabel *lab = new QLabel(this);
-        lab->setText(i18n("Startup error or warning, check our <a href='#'>online manual</a>."));
+        lab->setText(i18n("Startup error or warning. See the <a href='#'>PhraseSplice Handbook</a>."));
         connect(lab, &QLabel::linkActivated, this, &Wizard::slotOpenManual);
         m_startLayout->addWidget(lab);
     }
@@ -709,14 +706,7 @@ bool Wizard::isOk() const
 
 void Wizard::slotOpenManual()
 {
-    auto *job = new KIO::OpenUrlJob(
-        QUrl(QStringLiteral("https://docs.kdenlive.org/troubleshooting/installation_troubleshooting.html?mtm_campaign=kdenlive_inapp&mtm_kwd=welcome_wizard")));
-    job->setUiDelegate(KIO::createDefaultJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, this));
-    // methods like setRunExecutables, setSuggestedFilename, setEnableExternalBrowser, setFollowRedirections
-    // exist in both classes
-    job->start();
-    // KIO::OpenUrlJob(QUrl(QStringLiteral("https://docs.kdenlive.org/troubleshooting/installation_troubleshooting.html?mtm_campaign=kdenlive_inapp&mtm_kwd=welcome_wizard")),
-    // QStringLiteral("text/html"));
+    pCore->openDocumentationLink(QUrl(QStringLiteral("phrasesplice-help:troubleshooting")));
 }
 
 bool Wizard::checkHwEncoder(const QString &name, const QStringList &args, const QTemporaryFile &file)

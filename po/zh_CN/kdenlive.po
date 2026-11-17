@@ -41376,3 +41376,25 @@ msgstr "重启 PhraseSplice 后，此设置才会生效"
 
 msgid "The PhraseSplice renderer is missing. Reinstall the complete application to enable rendering."
 msgstr "缺少 PhraseSplice 渲染组件。请重新安装完整程序后再导出。"
+
+msgid "PhraseSplice Handbook"
+msgstr "PhraseSplice 帮助手册"
+
+msgctxt "@info:tooltip"
+msgid "PhraseSplice Handbook"
+msgstr "PhraseSplice 帮助手册"
+
+msgid "Open effect documentation"
+msgstr "打开效果说明"
+
+msgid "Help improve PhraseSplice"
+msgstr "帮助改进 PhraseSplice"
+
+msgid "For device configuration, see the <a href=\"phrasesplice-help:jog-shuttle\">PhraseSplice Handbook</a>."
+msgstr "设备配置请参阅 <a href=\"phrasesplice-help:jog-shuttle\">PhraseSplice 帮助手册</a>。"
+
+msgid "Credits"
+msgstr "致谢"
+
+msgid "Startup error or warning. See the <a href='#'>PhraseSplice Handbook</a>."
+msgstr "启动出现错误或警告。请参阅 <a href='#'>PhraseSplice 帮助手册</a>。"

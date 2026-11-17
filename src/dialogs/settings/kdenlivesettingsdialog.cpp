@@ -620,11 +620,8 @@ void KdenliveSettingsDialog::initJogShuttlePage()
 #endif /* USE_JOGSHUTTLE */
     m_pageJog = addPage(p6, i18n("JogShuttle"), QStringLiteral("dialog-input-devices"));
 #if defined(Q_OS_WIN)
-    m_configShuttle.shuttledisabled->setText(i18n("For device configuration see <a "
-                                                  "href=\"https://docs.kdenlive.org/getting_started/configure_kdenlive/configuration_jogshuttle.html"
-                                                  "#windows?mtm_campaign=kdenlive_inapp&mtm_kwd=jogshuttle_settings\">our "
-                                                  "documentation</a>."));
-    connect(m_configShuttle.shuttledisabled, &QLabel::linkActivated, this, &KdenliveSettingsDialog::openBrowserUrl);
+    m_configShuttle.shuttledisabled->setText(i18n("For device configuration, see the <a href=\"phrasesplice-help:jog-shuttle\">PhraseSplice Handbook</a>."));
+    connect(m_configShuttle.shuttledisabled, &QLabel::linkActivated, this, [](const QString &url) { pCore->openDocumentationLink(QUrl(url)); });
 #endif
 }
 

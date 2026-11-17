@@ -44032,3 +44032,25 @@ msgstr "%1 小時"
 #~| msgid "Properties"
 #~ msgid "%1 properties"
 #~ msgstr "屬性"
+
+msgid "PhraseSplice Handbook"
+msgstr "PhraseSplice 說明手冊"
+
+msgctxt "@info:tooltip"
+msgid "PhraseSplice Handbook"
+msgstr "PhraseSplice 說明手冊"
+
+msgid "Open effect documentation"
+msgstr "開啟效果說明"
+
+msgid "Help improve PhraseSplice"
+msgstr "協助改進 PhraseSplice"
+
+msgid "For device configuration, see the <a href=\"phrasesplice-help:jog-shuttle\">PhraseSplice Handbook</a>."
+msgstr "裝置設定請參閱 <a href=\"phrasesplice-help:jog-shuttle\">PhraseSplice 說明手冊</a>。"
+
+msgid "Credits"
+msgstr "致謝"
+
+msgid "Startup error or warning. See the <a href='#'>PhraseSplice Handbook</a>."
+msgstr "啟動出現錯誤或警告。請參閱 <a href='#'>PhraseSplice 說明手冊</a>。"

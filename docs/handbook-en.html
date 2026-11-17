@@ -1,0 +1,55 @@
+<!doctype html>
+<!-- SPDX-FileCopyrightText: 2026 PhraseSplice contributors
+     SPDX-License-Identifier: GPL-3.0-only -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PhraseSplice Handbook</title>
+</head>
+<body>
+  <h1>PhraseSplice Handbook</h1>
+  <p><a href="handbook-zh.html" lang="zh-CN">简体中文</a></p>
+  <p><a href="#editing">Import, edit and export</a> · <a href="#assistant">Edit with language</a> ·
+    <a href="#media">Image and video tools</a> · <a href="#effects">Effects</a> ·
+    <a href="#transitions">Transitions</a> · <a href="#troubleshooting">Troubleshooting</a></p>
+
+  <h2><a name="editing"></a>Import, edit and export</h2>
+  <ol>
+    <li>Add video, audio or images to the project bin, or choose Select Media in the AI assistant.</li>
+    <li>Drag media to the timeline. Drag clip edges to trim, or split a clip before moving its parts. Linked picture and sound move together.</li>
+    <li>Play the timeline in the project monitor to check picture, subtitles and sound.</li>
+    <li>Save the project for future edits. For delivery, use Export in the AI assistant to make an MP4, or use the editor's Render dialog to choose the format and range.</li>
+  </ol>
+  <p>Open an existing project through File → Open. Keep its source media and relink any files you move.</p>
+
+  <h2><a name="assistant"></a>Edit with language</h2>
+  <p>Choose Connect AI in the assistant to configure Codex, a compatible API, or local Ollama, or to get the WorkBuddy MCP configuration. Cloud providers use your own account and quota. The manual timeline works without an AI account.</p>
+  <p>After importing media, try “Join the clips in order, keep the original sound, and split the first clip at two seconds.” Review the timeline, describe further changes, or use Undo.</p>
+  <p>For a template, try “Make a travel photo story from these three photos, three seconds per photo.” Speech captions and local masking require the relevant models to be installed separately.</p>
+
+  <h2><a name="media"></a>Image and video tools</h2>
+  <p>Describe the treatment and output, for example “Lightly smooth the skin, keep its texture, and export a PNG.” For a cartoon overlay, ask for tracking on one front-facing person and say whether to keep the original audio. Review the whole result, especially when the face turns or is covered.</p>
+  <p>The video-generation panel offers local photo motion and online generation. Online video and voiceover availability and quota depend on the selected provider. Import the resulting media into the timeline to edit it.</p>
+
+  <h2><a name="effects"></a>Effects</h2>
+  <p>Select a timeline clip and drag an item from the Effects list onto it, or double-click the effect. Use the effect stack to adjust settings, add keyframes or temporarily disable the effect. Preview the result before exporting.</p>
+  <p><a href="#tracking">Motion tracking models</a></p>
+
+  <h2><a name="transitions"></a>Transitions and compositing</h2>
+  <p>Add a mix between adjacent clips and adjust its duration to change the overlap. To combine tracks, place a composition over the desired range and check the target track and timing.</p>
+
+  <h2><a name="tracking"></a>Motion tracking models</h2>
+  <p>Start with a tracker that needs no additional model and draw a box around the subject. For DaSIAM or Nano, use the effect panel's model folder and place the relevant ONNX files there, then select the algorithm again. Nano also requires OpenCV 4.7 or later.</p>
+  <p>Review the tracking after analysis. If the subject exits the frame, is covered or moves quickly, shorten the range or select the subject again.</p>
+
+  <h2><a name="jog-shuttle"></a>Jog/Shuttle devices</h2>
+  <p>Check that the operating system recognizes the controller. Then open Settings → Configure PhraseSplice and find the JogShuttle page. If supported, enable the device and assign button actions. If the page reports it is unavailable, check the driver and whether the current build supports your device.</p>
+
+  <h2><a name="troubleshooting"></a>Troubleshooting</h2>
+  <ul>
+    <li><b>Installation fails:</b> Use a writable local folder with an ASCII path. If a checksum fails, check the network and remove only the cache file named by the error before retrying.</li>
+    <li><b>Import or export fails:</b> Try a short H.264/AAC MP4. Check source media links, write permissions and available disk space.</li>
+    <li><b>The assistant misses a request:</b> Check the connection, selected model and tool-call support. Start with a short clip and a single instruction, then inspect the timeline.</li>
+  </ul>
+</body>
+</html>
