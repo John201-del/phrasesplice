@@ -16,7 +16,7 @@
 
 *PhraseSplice in use: waterfall footage in the player, alongside the timeline and AI assistant. [Watch or download the MP4 export with audio](docs/assets/localcut-demo.mp4), or [try the source sample](examples/localcut-nature.mp4). See [third-party notices](docs/THIRD_PARTY.md) for footage sources and licenses.*
 
-The Windows preview opens existing `.kdenlive` projects. When upgrading, install the preview in a new directory and reopen your existing projects.
+When upgrading, install the preview in a new directory. Use File → Open to continue editing existing projects.
 
 ## Highlights
 
@@ -76,6 +76,4 @@ If this is how you want to start editing, **Star** the project and follow upcomi
 
 ## Credit and license
 
-PhraseSplice is an independent Kdenlive derivative, adding a language assistant, structured editing bridge, templates and local media integrations. Core editing capabilities come from Kdenlive, MLT, Qt, KDE Frameworks and FFmpeg. This is not an official KDE or OpenAI product.
-
-The application is [GPL v3](COPYING); per-file licenses are listed in [LICENSES](LICENSES) and [REUSE.toml](REUSE.toml). [Upstream author credits](AUTHORS) are preserved. Models, fonts, external assets and services have their own terms; see [third-party notices](docs/THIRD_PARTY.md).
+The application uses [GPL v3](COPYING). See [LICENSES](LICENSES) and [REUSE.toml](REUSE.toml) for per-file licenses, [AUTHORS](AUTHORS) for upstream credits, and [third-party notices](docs/THIRD_PARTY.md) for the source baseline, project modifications and dependency licenses.

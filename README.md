@@ -16,7 +16,7 @@
 
 *PhraseSplice 实际工作界面：播放器显示瀑布素材，时间线与 AI 助手同时可见。[播放／下载有声 MP4 成片](docs/assets/localcut-demo.mp4) · [下载原始示例片段](examples/localcut-nature.mp4)，导入后即可体验。素材来源与许可见 [第三方说明](docs/THIRD_PARTY.md)。*
 
-Windows 预览版可继续打开原有 `.kdenlive` 工程。从旧版升级时，请另选安装目录，再打开原有工程。
+从旧版升级时，请另选安装目录。原有工程可以继续通过「文件 → 打开」使用。
 
 ## 为什么做 PhraseSplice
 
@@ -134,6 +134,4 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\check-runtime.ps1
 
 ## 来源与许可证
 
-PhraseSplice 是 Kdenlive 的独立衍生项目，新增语言助手、结构化编辑桥、模板及本地媒体处理适配；基础编辑能力来自 Kdenlive、MLT、Qt、KDE Frameworks 和 FFmpeg。本项目不是 KDE 或 OpenAI 的官方产品。
-
-应用采用 [GPL v3](COPYING)，逐文件许可见 [LICENSES](LICENSES) 与 [REUSE.toml](REUSE.toml)。保留 [上游作者](AUTHORS) 署名。模型权重、字体、云素材和服务各有自己的条款，详见 [第三方说明](docs/THIRD_PARTY.md)。
+应用采用 [GPL v3](COPYING)。逐文件许可见 [LICENSES](LICENSES) 与 [REUSE.toml](REUSE.toml)，原作者署名见 [AUTHORS](AUTHORS)。有关上游来源、项目修改和依赖许可，见 [第三方说明](docs/THIRD_PARTY.md)。
